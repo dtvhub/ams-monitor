@@ -31,3 +31,4 @@ jobs:
     - name: Send ntfy alert
       if: contains(steps.ams.outputs.result, 'NEW_EVENT')
       run: |
+        curl -d "New meteor detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
