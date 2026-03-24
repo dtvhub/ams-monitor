@@ -26,7 +26,11 @@ jobs:
       id: ams
       run: |
         python3 main.py > output.txt
-        echo "result=$(cat output.txt)" >> $GITHUB_OUTPUT
+
+        # Extract ONLY the last line (NEW_EVENT or NO_EVENT)
+        RESULT=$(tail -n 1 output.txt | tr -d '\r')
+
+        echo "result=$RESULT" >> $GITHUB_OUTPUT
 
     - name: Send ntfy alert
       if: contains(steps.ams.outputs.result, 'NEW_EVENT')
