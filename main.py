@@ -1,7 +1,8 @@
 import requests
 import os
+from bs4 import BeautifulSoup
 
-AMS_URL = "https://www.amsmeteors.org/members/api/open_api/events"
+AMS_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
 LAST_EVENT_FILE = "last_event.txt"
 
 
@@ -9,13 +10,24 @@ def get_latest_event_id():
     try:
         response = requests.get(AMS_URL, timeout=10)
         response.raise_for_status()
-        data = response.json()
 
-        # AMS returns a list of events; newest is index 0
-        if isinstance(data, list) and len(data) > 0:
-            return str(data[0].get("id"))
+        soup = BeautifulSoup(response.text, "html.parser")
 
-        return None
+        # The first event row is always the newest
+        first_row = soup.select_one("table tbody tr")
+
+        if not first_row:
+            print("DEBUG_ERROR No table rows found")
+            return None
+
+        # Event ID is in the first <td>
+        event_id_cell = first_row.find("td")
+        if not event_id_cell:
+            print("DEBUG_ERROR No event ID cell found")
+            return None
+
+        event_id = event_id_cell.text.strip()
+        return event_id
 
     except Exception as e:
         print(f"DEBUG_ERROR {e}")
