@@ -1,3 +1,18 @@
-- name: Send ntfy alert
-  run: |
-    curl -d "Meteor event detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Run AMS monitor
+      id: ams
+      run: |
+        python3 main.py > output.txt
+        echo "result=$(cat output.txt)" >> $GITHUB_OUTPUT
+
+    - name: Send ntfy alert
+      if: contains(steps.ams.outputs.result, 'NEW_EVENT')
+      run: |
+        curl -d "New meteor detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
