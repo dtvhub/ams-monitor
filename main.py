@@ -1,35 +1,61 @@
 import requests
+import json
 import os
-import re
 
-AMS_URL = "https://www.amsmeteors.org/members/imo_view/browse_events"
+AMS_URL = "https://www.amsmeteors.org/members/api/open_api/get_event_list"
+
+LAST_EVENT_FILE = "last_event.txt"
+
 
 def get_latest_event_id():
-    r = requests.get(AMS_URL)
-    r.raise_for_status()
-    text = r.text
+    try:
+        response = requests.get(AMS_URL, timeout=10)
+        response.raise_for_status()
+        data = response.json()
 
-    # AMS event IDs look like: 20260324-123456
-    match = re.search(r"\d{8}-\d{6}", text)
-    if match:
-        return match.group(0)
-    return None
+        # AMS returns a list of events; newest is index 0
+        if isinstance(data, list) and len(data) > 0:
+            return str(data[0].get("id"))
+        else:
+            return None
+
+    except Exception as e:
+        print("DEBUG ERROR in get_latest_event_id:", e)
+        return None
+
 
 def read_last_event():
-    if not os.path.exists("last_event.txt"):
+    if not os.path.exists(LAST_EVENT_FILE):
         return None
-    with open("last_event.txt", "r") as f:
-        return f.read().strip()
+    try:
+        with open(LAST_EVENT_FILE, "r") as f:
+            return f.read().strip()
+    except:
+        return None
+
 
 def write_last_event(event_id):
-    with open("last_event.txt", "w") as f:
-        f.write(event_id)
+    try:
+        with open(LAST_EVENT_FILE, "w") as f:
+            f.write(str(event_id))
+    except Exception as e:
+        print("DEBUG ERROR writing last_event:", e)
 
-latest = get_latest_event_id()
-last = read_last_event()
 
-if latest and latest != last:
-    print("NEW_EVENT")
-    write_last_event(latest)
-else:
-    print("NO_EVENT")
+def main():
+    latest = get_latest_event_id()
+    last = read_last_event()
+
+    # Debug prints so GitHub Actions ALWAYS shows something
+    print("DEBUG latest =", latest)
+    print("DEBUG last   =", last)
+
+    if latest and latest != last:
+        print("NEW_EVENT")
+        write_last_event(latest)
+    else:
+        print("NO_EVENT")
+
+
+if __name__ == "__main__":
+    main()
