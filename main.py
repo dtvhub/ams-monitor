@@ -1,7 +1,7 @@
 import requests
 import os
 
-AMS_URL = "https://www.amsmeteors.org/members/api/open_api/get_event_list"
+AMS_URL = "https://www.amsmeteors.org/members/api/open_api/events"
 LAST_EVENT_FILE = "last_event.txt"
 
 
@@ -45,7 +45,6 @@ def main():
     latest = get_latest_event_id()
     last = read_last_event()
 
-    # Debug output (safe for GitHub Actions)
     print(f"DEBUG_LATEST {latest}")
     print(f"DEBUG_LAST {last}")
 
