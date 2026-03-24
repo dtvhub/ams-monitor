@@ -1,5 +1,4 @@
 import requests
-import json
 import os
 
 AMS_URL = "https://www.amsmeteors.org/members/api/open_api/get_event_list"
@@ -12,12 +11,14 @@ def get_latest_event_id():
         response.raise_for_status()
         data = response.json()
 
+        # AMS returns a list of events; newest is index 0
         if isinstance(data, list) and len(data) > 0:
             return str(data[0].get("id"))
+
         return None
 
     except Exception as e:
-        print(f"DEBUG_ERROR:{e}")
+        print(f"DEBUG_ERROR {e}")
         return None
 
 
@@ -27,7 +28,8 @@ def read_last_event():
     try:
         with open(LAST_EVENT_FILE, "r") as f:
             return f.read().strip()
-    except:
+    except Exception as e:
+        print(f"DEBUG_READ_ERROR {e}")
         return None
 
 
@@ -36,16 +38,16 @@ def write_last_event(event_id):
         with open(LAST_EVENT_FILE, "w") as f:
             f.write(str(event_id))
     except Exception as e:
-        print(f"DEBUG_WRITE_ERROR:{e}")
+        print(f"DEBUG_WRITE_ERROR {e}")
 
 
 def main():
     latest = get_latest_event_id()
     last = read_last_event()
 
-    # Debug prints (safe for GitHub Actions)
-    print(f"DEBUG_LATEST:{latest}")
-    print(f"DEBUG_LAST:{last}")
+    # Debug output (safe for GitHub Actions)
+    print(f"DEBUG_LATEST {latest}")
+    print(f"DEBUG_LAST {last}")
 
     if latest and latest != last:
         print("NEW_EVENT")
