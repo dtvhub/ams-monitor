@@ -1,26 +1,3 @@
-name: AMS Monitor
-
-on:
-  schedule:
-    - cron: "*/5 * * * *"
-  workflow_dispatch:
-
-jobs:
-  check-ams:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Run AMS monitor
-        env:
-          IFTTT_KEY: ${{ secrets.IFTTT_KEY }}
-        run: python main.py
+- name: Send ntfy alert
+  run: |
+    curl -d "Meteor event detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
