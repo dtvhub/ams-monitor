@@ -22,17 +22,12 @@ jobs:
       run: |
         pip install requests
 
-    - name: Run AMS monitor
+    - name: List repo files
+      run: |
+        echo "=== FILE TREE ==="
+        ls -R .
+
+    - name: Run AMS monitor (show raw output)
       id: ams
       run: |
-        python3 main.py > output.txt
-
-        # Extract ONLY the last line (NEW_EVENT or NO_EVENT)
-        RESULT=$(tail -n 1 output.txt | tr -d '\r')
-
-        echo "result=$RESULT" >> $GITHUB_OUTPUT
-
-    - name: Send ntfy alert
-      if: contains(steps.ams.outputs.result, 'NEW_EVENT')
-      run: |
-        curl -d "New meteor detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
+        python3 main.py
