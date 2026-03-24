@@ -1,3 +1,10 @@
+name: AMS Monitor
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # runs every 15 minutes
+  workflow_dispatch:
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -5,6 +12,15 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    - name: Install dependencies
+      run: |
+        pip install requests
 
     - name: Run AMS monitor
       id: ams
@@ -15,4 +31,3 @@ jobs:
     - name: Send ntfy alert
       if: contains(steps.ams.outputs.result, 'NEW_EVENT')
       run: |
-        curl -d "New meteor detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
