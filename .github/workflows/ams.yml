@@ -2,7 +2,7 @@ name: AMS Monitor
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # every 5 minutes; adjust as you like
+    - cron: "*/5 * * * *"  # every 5 minutes
   workflow_dispatch:
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
       - name: Send ntfy notification
         if: ${{ env.STATUS == 'NORMAL' || env.STATUS == 'HIGH' }}
         env:
-          NTFY_URL: ${{ secrets.NTFY_URL }}  # e.g. https://ntfy.sh/your-topic
+          NTFY_URL: ${{ secrets.NTFY_URL }}
         run: |
           if [ "${STATUS}" = "HIGH" ]; then
             PRIORITY=4
