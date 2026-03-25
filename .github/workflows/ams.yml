@@ -46,7 +46,7 @@ jobs:
           if [ "${EVENT_TYPE}" = "UPDATED" ]; then
             TITLE="☄️ AMS Meteor Event Updated"
           else
-            TITLE="☄️ AMS Meteor Event Confirmed"
+            TITLE="☄️ AMS Meteor Event Confirmed *NEW*"
           fi
 
           BODY="${SUMMARY}"
