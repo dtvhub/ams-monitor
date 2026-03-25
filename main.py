@@ -5,6 +5,7 @@ import os
 
 BROWSE_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
 LAST_SUMMARY_FILE = "last_summary.txt"
+LAST_EVENT_FILE = "last_event_url.txt"
 
 
 def fetch(url: str) -> str:
@@ -48,22 +49,22 @@ def classify_priority(reports: int) -> str:
         return "HIGH"
 
 
-def load_last_summary() -> str | None:
-    """Load last summary from file if it exists."""
-    if not os.path.exists(LAST_SUMMARY_FILE):
+def load_file(path: str) -> str | None:
+    """Load text from a file if it exists."""
+    if not os.path.exists(path):
         return None
     try:
-        with open(LAST_SUMMARY_FILE, "r", encoding="utf-8") as f:
+        with open(path, "r", encoding="utf-8") as f:
             return f.read().strip()
     except Exception:
         return None
 
 
-def save_last_summary(summary: str):
-    """Save the current summary to file."""
+def save_file(path: str, text: str):
+    """Save text to a file."""
     try:
-        with open(LAST_SUMMARY_FILE, "w", encoding="utf-8") as f:
-            f.write(summary)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
     except Exception:
         pass
 
@@ -82,6 +83,7 @@ def main():
         print("REPORTS=0")
         print("SUMMARY=")
         print("UNCHANGED=YES")
+        print("EVENT_TYPE=NONE")
         print("URL=")
         sys.exit(0)
 
@@ -99,15 +101,30 @@ def main():
         print("REPORTS=0")
         print("SUMMARY=")
         print("UNCHANGED=YES")
+        print("EVENT_TYPE=NONE")
         print(f"URL={event_url}")
         sys.exit(0)
 
-    # --- NEW LOGIC: detect summary change ---
-    last_summary = load_last_summary()
+    # Load previous values
+    last_summary = load_file(LAST_SUMMARY_FILE)
+    last_event_url = load_file(LAST_EVENT_FILE)
+
+    # Determine if event ID changed
+    new_event = (event_url != last_event_url)
+
+    # Determine if summary changed
     unchanged = (summary == last_summary)
 
-    if not unchanged:
-        save_last_summary(summary)
+    # Determine event type
+    if new_event:
+        event_type = "CONFIRMED"
+    else:
+        event_type = "UPDATED" if not unchanged else "NONE"
+
+    # Save new values if changed
+    if new_event or not unchanged:
+        save_file(LAST_SUMMARY_FILE, summary)
+        save_file(LAST_EVENT_FILE, event_url)
 
     status = classify_priority(reports)
 
@@ -115,6 +132,7 @@ def main():
     print(f"REPORTS={reports}")
     print(f"SUMMARY={summary}")
     print(f"UNCHANGED={'YES' if unchanged else 'NO'}")
+    print(f"EVENT_TYPE={event_type}")
     print(f"URL={event_url}")
 
 
