@@ -49,13 +49,21 @@ jobs:
             TITLE="☄️ AMS Meteor Event Confirmed *NEW*"
           fi
 
-          BODY="${SUMMARY}"
+          # Priority bullet before summary
+          if [ "${STATUS}" = "HIGH" ]; then
+            BULLET="🔺"
+          else
+            BULLET="🔸"
+          fi
+
+          BODY="${BULLET} ${SUMMARY}"
 
           curl \
             -H "Title: ${TITLE}" \
             -H "Priority: ${PRIORITY}" \
             -d "${BODY}" \
             "${NTFY_URL}"
+
       - name: Commit updated memory files
         if: ${{ (env.UNCHANGED == 'NO') }}
         run: |
