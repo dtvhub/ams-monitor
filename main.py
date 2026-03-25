@@ -13,9 +13,8 @@ def get_latest_event_id():
 
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # The first event row is always the newest
+        # The first event row in the table is always the newest
         first_row = soup.select_one("table tbody tr")
-
         if not first_row:
             print("DEBUG_ERROR No table rows found")
             return None
