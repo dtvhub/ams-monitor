@@ -28,11 +28,9 @@ def extract_first_event(html: str):
     reports_match = re.search(r'(\d+)\s+reports', snippet, re.IGNORECASE)
     reports = int(reports_match.group(1)) if reports_match else 0
 
-    # Locations (very loose pattern, but works for AMS)
-    locations_match = re.search(
-        r'([A-Z][A-Za-z]+(?:,\s*[A-Z][A-Za-z]+)*)', snippet
-    )
-    locations = locations_match.group(1) if locations_match else "Unknown location"
+    # Extract state abbreviations only (AZ, UT, KY, etc.)
+    state_matches = re.findall(r'\b[A-Z]{2}\b', snippet)
+    locations = ", ".join(state_matches) if state_matches else "Unknown location"
 
     return {
         "url": event_url,
