@@ -1,69 +1,80 @@
-import requests
-import os
-from bs4 import BeautifulSoup
-
-AMS_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
-LAST_EVENT_FILE = "last_event.txt"
+import urllib.request
+import re
+import sys
 
 
-def get_latest_event_id():
-    try:
-        response = requests.get(AMS_URL, timeout=10)
-        response.raise_for_status()
+AMS_EVENTS_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
 
-        soup = BeautifulSoup(response.text, "html.parser")
 
-        # The first event row in the table is always the newest
-        first_row = soup.select_one("table tbody tr")
-        if not first_row:
-            print("DEBUG_ERROR No table rows found")
-            return None
+def fetch_html(url: str) -> str:
+    with urllib.request.urlopen(url, timeout=20) as resp:
+        return resp.read().decode("utf-8", errors="ignore")
 
-        # Event ID is in the first <td>
-        event_id_cell = first_row.find("td")
-        if not event_id_cell:
-            print("DEBUG_ERROR No event ID cell found")
-            return None
 
-        event_id = event_id_cell.text.strip()
-        return event_id
-
-    except Exception as e:
-        print(f"DEBUG_ERROR {e}")
+def extract_first_event(html: str):
+    # Find first event URL
+    m = re.search(r'href="(/members/imo_view/event/\d+[^"]*)"', html)
+    if not m:
         return None
 
+    event_path = m.group(1)
+    event_url = "https://fireball.amsmeteors.org" + event_path
 
-def read_last_event():
-    if not os.path.exists(LAST_EVENT_FILE):
-        return None
-    try:
-        with open(LAST_EVENT_FILE, "r") as f:
-            return f.read().strip()
-    except Exception as e:
-        print(f"DEBUG_READ_ERROR {e}")
-        return None
+    # Take a window around the match to search for reports and locations
+    start = max(0, m.start() - 800)
+    end = min(len(html), m.end() + 800)
+    snippet = html[start:end]
+
+    # Reports (e.g., "7 reports")
+    reports_match = re.search(r'(\d+)\s+reports', snippet, re.IGNORECASE)
+    reports = int(reports_match.group(1)) if reports_match else 0
+
+    # Locations: try to grab something like "KY, TN, OH" or similar
+    # This is intentionally loose; you can tighten it once you see real HTML.
+    locations_match = re.search(
+        r'([A-Z][A-Za-z]+(?:,\s*[A-Z][A-Za-z]+)*)', snippet
+    )
+    locations = locations_match.group(1) if locations_match else "Unknown location"
+
+    return {
+        "url": event_url,
+        "reports": reports,
+        "locations": locations,
+    }
 
 
-def write_last_event(event_id):
-    try:
-        with open(LAST_EVENT_FILE, "w") as f:
-            f.write(str(event_id))
-    except Exception as e:
-        print(f"DEBUG_WRITE_ERROR {e}")
+def classify_priority(reports: int) -> str:
+    if reports < 5:
+        return "NONE"
+    elif reports < 10:
+        return "NORMAL"
+    else:
+        return "HIGH"
 
 
 def main():
-    latest = get_latest_event_id()
-    last = read_last_event()
+    try:
+        html = fetch_html(AMS_EVENTS_URL)
+    except Exception as e:
+        # Fail quietly but clearly for the workflow
+        print(f"STATUS=ERROR")
+        print(f"ERROR={e}")
+        sys.exit(0)
 
-    print(f"DEBUG_LATEST {latest}")
-    print(f"DEBUG_LAST {last}")
+    event = extract_first_event(html)
+    if not event:
+        print("STATUS=NONE")
+        print("REPORTS=0")
+        print("LOCATIONS=Unknown location")
+        print("URL=")
+        sys.exit(0)
 
-    if latest and latest != last:
-        print("NEW_EVENT")
-        write_last_event(latest)
-    else:
-        print("NO_EVENT")
+    status = classify_priority(event["reports"])
+
+    print(f"STATUS={status}")
+    print(f"REPORTS={event['reports']}")
+    print(f"LOCATIONS={event['locations']}")
+    print(f"URL={event['url']}")
 
 
 if __name__ == "__main__":
