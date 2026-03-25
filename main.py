@@ -9,13 +9,11 @@ LAST_EVENT_FILE = "last_event_url.txt"
 
 
 def fetch(url: str) -> str:
-    """Fetch HTML from a URL."""
     with urllib.request.urlopen(url, timeout=20) as resp:
         return resp.read().decode("utf-8", errors="ignore")
 
 
 def extract_latest_event_url(html: str) -> str | None:
-    """Extract the first (newest) event URL from the browse page."""
     m = re.search(r'href="(/members/imo_view/event/\d+[^"]*)"', html)
     if not m:
         return None
@@ -23,11 +21,6 @@ def extract_latest_event_url(html: str) -> str | None:
 
 
 def extract_summary_sentence(html: str) -> tuple[str | None, int]:
-    """
-    Extract the AMS summary sentence:
-    'We received X reports about a fireball seen over ...'
-    Returns (sentence, report_count)
-    """
     m = re.search(r"We received .*? UT\.", html)
     if not m:
         return None, 0
@@ -50,7 +43,6 @@ def classify_priority(reports: int) -> str:
 
 
 def load_file(path: str) -> str | None:
-    """Load text from a file if it exists."""
     if not os.path.exists(path):
         return None
     try:
@@ -61,7 +53,6 @@ def load_file(path: str) -> str | None:
 
 
 def save_file(path: str, text: str):
-    """Save text to a file."""
     try:
         with open(path, "w", encoding="utf-8") as f:
             f.write(text)
@@ -105,23 +96,18 @@ def main():
         print(f"URL={event_url}")
         sys.exit(0)
 
-    # Load previous values
     last_summary = load_file(LAST_SUMMARY_FILE)
     last_event_url = load_file(LAST_EVENT_FILE)
 
-    # Determine if event ID changed
     new_event = (event_url != last_event_url)
-
-    # Determine if summary changed
     unchanged = (summary == last_summary)
 
-    # Determine event type
     if new_event:
         event_type = "CONFIRMED"
     else:
         event_type = "UPDATED" if not unchanged else "NONE"
 
-    # Save new values if changed
+    # ⭐ Save BEFORE printing output
     if new_event or not unchanged:
         save_file(LAST_SUMMARY_FILE, summary)
         save_file(LAST_EVENT_FILE, event_url)
