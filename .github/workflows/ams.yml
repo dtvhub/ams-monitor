@@ -31,7 +31,7 @@ jobs:
           done < output.txt
 
       - name: Send ntfy notification
-        if: ${{ env.STATUS == 'NORMAL' || env.STATUS == 'HIGH' }}
+        if: ${{ (env.STATUS == 'NORMAL' || env.STATUS == 'HIGH') && env.UNCHANGED == 'NO' }}
         env:
           NTFY_URL: ${{ secrets.NTFY_URL }}
         run: |
