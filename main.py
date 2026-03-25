@@ -5,12 +5,37 @@ import sys
 AMS_EVENTS_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
 
 # Valid US state abbreviations
-VALID_STATES = {
+US_STATES = {
     "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA",
     "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
     "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT",
     "VA","WA","WV","WI","WY"
 }
+
+# Canadian provinces/territories
+CA_PROVINCES = {
+    "AB","BC","MB","NB","NL","NS","NT","NU","ON","PE","QC","SK","YT"
+}
+
+# Australian states/territories
+AU_STATES = {
+    "NSW","QLD","SA","TAS","VIC","WA","ACT","NT"
+}
+
+# UK subdivisions (common ones AMS might show)
+UK_REGIONS = {
+    "ENG","SCT","WLS","NIR"
+}
+
+# ISO‑3166 country codes (common)
+COUNTRIES = {
+    "US","CA","MX","UK","AU","FR","DE","ES","IT","BR","JP","CN","RU","IN","NZ",
+    "SE","NO","FI","DK","PL","PT","GR","CH","AT","BE","NL","CZ","SK","HU","RO",
+    "BG","TR","ZA","AR","CL","CO","PE"
+}
+
+# Combine all valid tokens
+VALID_CODES = US_STATES | CA_PROVINCES | AU_STATES | UK_REGIONS | COUNTRIES
 
 
 def fetch_html(url: str) -> str:
@@ -36,23 +61,23 @@ def extract_first_event(html: str):
     reports_match = re.search(r'(\d+)\s+reports', snippet, re.IGNORECASE)
     reports = int(reports_match.group(1)) if reports_match else 0
 
-    # Extract all two-letter uppercase tokens
-    raw_states = re.findall(r'\b[A-Z]{2}\b', snippet)
+    # Extract all uppercase tokens (2–3 letters)
+    raw_tokens = re.findall(r'\b[A-Z]{2,3}\b', snippet)
 
-    # Filter to valid states only, remove duplicates, preserve order
+    # Filter to valid global codes, dedupe, preserve order
     seen = set()
-    states = []
-    for s in raw_states:
-        if s in VALID_STATES and s not in seen:
-            seen.add(s)
-            states.append(s)
+    locations = []
+    for token in raw_tokens:
+        if token in VALID_CODES and token not in seen:
+            seen.add(token)
+            locations.append(token)
 
-    locations = ", ".join(states) if states else "Unknown location"
+    location_str = ", ".join(locations) if locations else "Unknown location"
 
     return {
         "url": event_url,
         "reports": reports,
-        "locations": locations,
+        "locations": location_str,
     }
 
 
