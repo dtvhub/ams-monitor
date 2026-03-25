@@ -56,3 +56,17 @@ jobs:
             -H "Priority: ${PRIORITY}" \
             -d "${BODY}" \
             "${NTFY_URL}"
+      - name: Commit updated memory files
+        if: ${{ (env.UNCHANGED == 'NO') }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add memory files if they exist
+          git add last_summary.txt last_event_url.txt || true
+
+          # Commit only if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "Update memory files [skip ci]"
+            git push
+          fi
