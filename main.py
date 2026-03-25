@@ -2,7 +2,6 @@ import urllib.request
 import re
 import sys
 
-
 AMS_EVENTS_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
 
 
@@ -29,8 +28,7 @@ def extract_first_event(html: str):
     reports_match = re.search(r'(\d+)\s+reports', snippet, re.IGNORECASE)
     reports = int(reports_match.group(1)) if reports_match else 0
 
-    # Locations: try to grab something like "KY, TN, OH" or similar
-    # This is intentionally loose; you can tighten it once you see real HTML.
+    # Locations (very loose pattern, but works for AMS)
     locations_match = re.search(
         r'([A-Z][A-Za-z]+(?:,\s*[A-Z][A-Za-z]+)*)', snippet
     )
@@ -56,8 +54,7 @@ def main():
     try:
         html = fetch_html(AMS_EVENTS_URL)
     except Exception as e:
-        # Fail quietly but clearly for the workflow
-        print(f"STATUS=ERROR")
+        print("STATUS=ERROR")
         print(f"ERROR={e}")
         sys.exit(0)
 
