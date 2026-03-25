@@ -1,8 +1,10 @@
 import urllib.request
 import re
 import sys
+import os
 
 BROWSE_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
+LAST_SUMMARY_FILE = "last_summary.txt"
 
 
 def fetch(url: str) -> str:
@@ -25,14 +27,12 @@ def extract_summary_sentence(html: str) -> tuple[str | None, int]:
     'We received X reports about a fireball seen over ...'
     Returns (sentence, report_count)
     """
-    # Find the summary paragraph
     m = re.search(r"We received .*? UT\.", html)
     if not m:
         return None, 0
 
     sentence = m.group(0)
 
-    # Extract the report count from the sentence
     count_match = re.search(r"We received (\d+)", sentence)
     reports = int(count_match.group(1)) if count_match else 0
 
@@ -48,6 +48,26 @@ def classify_priority(reports: int) -> str:
         return "HIGH"
 
 
+def load_last_summary() -> str | None:
+    """Load last summary from file if it exists."""
+    if not os.path.exists(LAST_SUMMARY_FILE):
+        return None
+    try:
+        with open(LAST_SUMMARY_FILE, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception:
+        return None
+
+
+def save_last_summary(summary: str):
+    """Save the current summary to file."""
+    try:
+        with open(LAST_SUMMARY_FILE, "w", encoding="utf-8") as f:
+            f.write(summary)
+    except Exception:
+        pass
+
+
 def main():
     try:
         browse_html = fetch(BROWSE_URL)
@@ -61,6 +81,7 @@ def main():
         print("STATUS=NONE")
         print("REPORTS=0")
         print("SUMMARY=")
+        print("UNCHANGED=YES")
         print("URL=")
         sys.exit(0)
 
@@ -77,14 +98,23 @@ def main():
         print("STATUS=NONE")
         print("REPORTS=0")
         print("SUMMARY=")
+        print("UNCHANGED=YES")
         print(f"URL={event_url}")
         sys.exit(0)
+
+    # --- NEW LOGIC: detect summary change ---
+    last_summary = load_last_summary()
+    unchanged = (summary == last_summary)
+
+    if not unchanged:
+        save_last_summary(summary)
 
     status = classify_priority(reports)
 
     print(f"STATUS={status}")
     print(f"REPORTS={reports}")
     print(f"SUMMARY={summary}")
+    print(f"UNCHANGED={'YES' if unchanged else 'NO'}")
     print(f"URL={event_url}")
 
 
