@@ -30,4 +30,11 @@ jobs:
     - name: Run AMS monitor (show raw output)
       id: ams
       run: |
-        python3 main.py
+        python3 main.py > output.txt
+        RESULT=$(tail -n 1 output.txt | tr -d '\r')
+        echo "result=$RESULT" >> $GITHUB_OUTPUT
+
+    - name: Send ntfy alert if NEW_EVENT
+      if: steps.ams.outputs.result == 'NEW_EVENT'
+      run: |
+        curl -d "🚨 New Meteor Event Detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
