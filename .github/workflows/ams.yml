@@ -2,39 +2,50 @@ name: AMS Monitor
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"  # every 5 minutes; adjust as you like
   workflow_dispatch:
 
 jobs:
-  check:
+  ams-monitor:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.x"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        pip install requests beautifulsoup4
+      - name: Run AMS monitor script
+        run: |
+          python main.py > output.txt
 
-    - name: List repo files
-      run: |
-        echo "=== FILE TREE ==="
-        ls -R .
+      - name: Export script output to env
+        run: |
+          while IFS='=' read -r key value; do
+            if [ -n "$key" ]; then
+              echo "$key=$value" >> $GITHUB_ENV
+            fi
+          done < output.txt
 
-    - name: Run AMS monitor (show raw output)
-      id: ams
-      run: |
-        python3 main.py > output.txt
-        RESULT=$(tail -n 1 output.txt | tr -d '\r')
-        echo "result=$RESULT" >> $GITHUB_OUTPUT
+      - name: Send ntfy notification
+        if: ${{ env.STATUS == 'NORMAL' || env.STATUS == 'HIGH' }}
+        env:
+          NTFY_URL: ${{ secrets.NTFY_URL }}  # e.g. https://ntfy.sh/your-topic
+        run: |
+          if [ "${STATUS}" = "HIGH" ]; then
+            PRIORITY=4
+          else
+            PRIORITY=3
+          fi
 
-    - name: Send ntfy alert if NEW_EVENT
-      if: steps.ams.outputs.result == 'NEW_EVENT'
-      run: |
-        curl -d "🚨 New Meteor Event Detected!" https://ntfy.sh/ams-monitor-ntfy-7f2c9e41bd
+          TITLE="☄️ AMS Meteor Event Confirmed"
+          BODY="Event occurred in ${LOCATIONS} with ${REPORTS} reports.\n${URL}"
+
+          curl \
+            -H "Title: ${TITLE}" \
+            -H "Priority: ${PRIORITY}" \
+            -d "${BODY}" \
+            "${NTFY_URL}"
