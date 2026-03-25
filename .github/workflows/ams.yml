@@ -42,7 +42,7 @@ jobs:
           fi
 
           TITLE="☄️ AMS Meteor Event Confirmed"
-          BODY="Event occurred in ${LOCATIONS} with ${REPORTS} reports."
+          BODY="${SUMMARY}"
 
           curl \
             -H "Title: ${TITLE}" \
