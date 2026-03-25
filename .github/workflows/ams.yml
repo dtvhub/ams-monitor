@@ -35,13 +35,20 @@ jobs:
         env:
           NTFY_URL: ${{ secrets.NTFY_URL }}
         run: |
+          # Determine priority
           if [ "${STATUS}" = "HIGH" ]; then
             PRIORITY=4
           else
             PRIORITY=3
           fi
 
-          TITLE="☄️ AMS Meteor Event Confirmed"
+          # Dynamic title based on event type
+          if [ "${EVENT_TYPE}" = "UPDATED" ]; then
+            TITLE="☄️ AMS Meteor Event Updated"
+          else
+            TITLE="☄️ AMS Meteor Event Confirmed"
+          fi
+
           BODY="${SUMMARY}"
 
           curl \
