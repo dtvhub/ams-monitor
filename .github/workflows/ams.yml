@@ -21,14 +21,29 @@ jobs:
       - name: Run AMS monitor script
         run: |
           python main.py > output.txt
+          echo "--- Script Output ---"
+          cat output.txt
 
-      - name: Export script output to env
+      - name: Export script output to env (safe multiline)
         run: |
           while IFS='=' read -r key value; do
             if [ -n "$key" ]; then
-              echo "$key=$value" >> $GITHUB_ENV
+              echo "Setting $key"
+              {
+                echo "$key<<EOF"
+                echo "$value"
+                echo "EOF"
+              } >> $GITHUB_ENV
             fi
           done < output.txt
+
+      - name: Debug env vars
+        run: |
+          echo "STATUS: $STATUS"
+          echo "REPORTS: $REPORTS"
+          echo "AGE: $AGE"
+          echo "SUMMARY:"
+          echo "$SUMMARY"
 
       - name: Send ntfy notification
         if: ${{ env.STATUS == 'NORMAL' || env.STATUS == 'HIGH' }}
@@ -42,10 +57,14 @@ jobs:
           fi
 
           TITLE="☄️ AMS Meteor Event Confirmed"
-          BODY="${SUMMARY}\n\nEvent age: ${AGE}"
+          BODY="${SUMMARY}
+
+Event age: ${AGE}"
+
+          echo "Sending notification..."
+          echo "Priority: $PRIORITY"
+          echo "Body:"
+          echo "$BODY"
 
           curl \
-            -H "Title: ${TITLE}" \
-            -H "Priority: ${PRIORITY}" \
-            -d "${BODY}" \
-            "${NTFY_URL}"
+           
