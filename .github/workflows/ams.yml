@@ -30,16 +30,19 @@ jobs:
             fi
           done < output.txt
 
+      # ⭐ Updated to include LOW priority alerts
       - name: Send ntfy notification
-        if: ${{ (env.STATUS == 'NORMAL' || env.STATUS == 'HIGH') && env.UNCHANGED == 'NO' }}
+        if: ${{ (env.STATUS == 'LOW' || env.STATUS == 'REGULAR' || env.STATUS == 'HIGH') && env.UNCHANGED == 'NO' }}
         env:
           NTFY_URL: ${{ secrets.NTFY_URL }}
         run: |
-          # Determine priority
+          # Determine ntfy priority
           if [ "${STATUS}" = "HIGH" ]; then
             PRIORITY=4
-          else
+          elif [ "${STATUS}" = "REGULAR" ]; then
             PRIORITY=3
+          else
+            PRIORITY=2
           fi
 
           # Dynamic title based on event type
@@ -49,11 +52,13 @@ jobs:
             TITLE="☄️ AMS Meteor Event Confirmed *NEW*"
           fi
 
-          # Priority bullet before summary
+          # Bullet icon based on priority tier
           if [ "${STATUS}" = "HIGH" ]; then
             BULLET="🔺"
-          else
+          elif [ "${STATUS}" = "REGULAR" ]; then
             BULLET="🔸"
+          else
+            BULLET="🔹"
           fi
 
           BODY="${BULLET} ${SUMMARY}"
