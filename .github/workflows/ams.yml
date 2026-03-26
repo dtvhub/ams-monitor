@@ -30,35 +30,36 @@ jobs:
             fi
           done < output.txt
 
-      # ⭐ Updated to include LOW priority alerts
+      # ⭐ Notify ONLY if:
+      #   - Priority is REGULAR or HIGH
+      #   - Summary changed (UNCHANGED == NO)
+      #   - Event is inside the 8-hour window
       - name: Send ntfy notification
-        if: ${{ (env.STATUS == 'LOW' || env.STATUS == 'REGULAR' || env.STATUS == 'HIGH') && env.UNCHANGED == 'NO' }}
+        if: ${{ (env.STATUS == 'REGULAR' || env.STATUS == 'HIGH')
+              && env.UNCHANGED == 'NO'
+              && env.INSIDE_WINDOW == 'YES' }}
         env:
           NTFY_URL: ${{ secrets.NTFY_URL }}
         run: |
           # Determine ntfy priority
           if [ "${STATUS}" = "HIGH" ]; then
             PRIORITY=4
-          elif [ "${STATUS}" = "REGULAR" ]; then
-            PRIORITY=3
           else
-            PRIORITY=2
+            PRIORITY=3
           fi
 
           # Dynamic title based on event type
           if [ "${EVENT_TYPE}" = "UPDATED" ]; then
-            TITLE="☄️ AMS Meteor Event Updated"
+            TITLE="☄️ Meteor Report Updated"
           else
-            TITLE="☄️ AMS Meteor Event Confirmed *NEW*"
+            TITLE="☄️ NEW Meteor Report Confirmed"
           fi
 
           # Bullet icon based on priority tier
           if [ "${STATUS}" = "HIGH" ]; then
             BULLET="🔺"
-          elif [ "${STATUS}" = "REGULAR" ]; then
-            BULLET="🔸"
           else
-            BULLET="🔹"
+            BULLET="🔸"
           fi
 
           BODY="${BULLET} ${SUMMARY}"
@@ -70,7 +71,7 @@ jobs:
             "${NTFY_URL}"
 
       - name: Commit updated memory files
-        if: ${{ (env.UNCHANGED == 'NO') }}
+        if: ${{ env.UNCHANGED == 'NO' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
