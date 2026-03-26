@@ -2,6 +2,7 @@ import urllib.request
 import re
 import sys
 import os
+from datetime import datetime, timedelta
 
 BROWSE_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
 LAST_SUMMARY_FILE = "last_summary.txt"
@@ -20,23 +21,38 @@ def extract_latest_event_url(html: str) -> str | None:
     return "https://fireball.amsmeteors.org" + m.group(1)
 
 
-def extract_summary_sentence(html: str) -> tuple[str | None, int]:
+def extract_summary_sentence(html: str) -> tuple[str | None, int, datetime | None]:
+    """
+    Extracts:
+      - summary sentence
+      - report count
+      - event timestamp (UTC)
+    """
+
+    # Summary sentence
     m = re.search(r"We received .*? UT\.", html)
     if not m:
-        return None, 0
+        return None, 0, None
 
     sentence = m.group(0)
 
+    # Report count
     count_match = re.search(r"We received (\d+)", sentence)
     reports = int(count_match.group(1)) if count_match else 0
 
-    return sentence, reports
+    # Extract event timestamp (AMS uses format like: "2024-01-15 03:22:10 UT")
+    t = re.search(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) UT", html)
+    if t:
+        try:
+            event_time = datetime.strptime(t.group(1), "%Y-%m-%d %H:%M:%S")
+        except Exception:
+            event_time = None
+    else:
+        event_time = None
+
+    return sentence, reports, event_time
 
 
-# ⭐ Updated priority logic
-# LOW = 0–9
-# REGULAR = 10–19
-# HIGH = 20+
 def classify_priority(reports: int) -> str:
     if reports <= 9:
         return "LOW"
@@ -65,6 +81,9 @@ def save_file(path: str, text: str):
 
 
 def main():
+    # -----------------------------
+    # Fetch browse page
+    # -----------------------------
     try:
         browse_html = fetch(BROWSE_URL)
     except Exception as e:
@@ -79,9 +98,13 @@ def main():
         print("SUMMARY=")
         print("UNCHANGED=YES")
         print("EVENT_TYPE=NONE")
+        print("INSIDE_WINDOW=NO")
         print("URL=")
         sys.exit(0)
 
+    # -----------------------------
+    # Fetch event details
+    # -----------------------------
     try:
         details_html = fetch(event_url)
     except Exception as e:
@@ -89,7 +112,7 @@ def main():
         print(f"ERROR={e}")
         sys.exit(0)
 
-    summary, reports = extract_summary_sentence(details_html)
+    summary, reports, event_time = extract_summary_sentence(details_html)
 
     if not summary:
         print("STATUS=NONE")
@@ -97,9 +120,24 @@ def main():
         print("SUMMARY=")
         print("UNCHANGED=YES")
         print("EVENT_TYPE=NONE")
+        print("INSIDE_WINDOW=NO")
         print(f"URL={event_url}")
         sys.exit(0)
 
+    # -----------------------------
+    # 8-hour look-back logic
+    # -----------------------------
+    now = datetime.utcnow()
+    lookback_start = now - timedelta(hours=8)
+
+    if event_time:
+        inside_window = event_time >= lookback_start
+    else:
+        inside_window = False  # If AMS doesn't give a timestamp, assume outside
+
+    # -----------------------------
+    # Compare with last saved event
+    # -----------------------------
     last_summary = load_file(LAST_SUMMARY_FILE)
     last_event_url = load_file(LAST_EVENT_FILE)
 
@@ -111,18 +149,22 @@ def main():
     else:
         event_type = "UPDATED" if not unchanged else "NONE"
 
-    # Save BEFORE printing output
+    # Save memory only if something changed
     if new_event or not unchanged:
         save_file(LAST_SUMMARY_FILE, summary)
         save_file(LAST_EVENT_FILE, event_url)
 
     status = classify_priority(reports)
 
+    # -----------------------------
+    # Output
+    # -----------------------------
     print(f"STATUS={status}")
     print(f"REPORTS={reports}")
     print(f"SUMMARY={summary}")
     print(f"UNCHANGED={'YES' if unchanged else 'NO'}")
     print(f"EVENT_TYPE={event_type}")
+    print(f"INSIDE_WINDOW={'YES' if inside_window else 'NO'}")
     print(f"URL={event_url}")
 
 
