@@ -33,11 +33,15 @@ def extract_summary_sentence(html: str) -> tuple[str | None, int]:
     return sentence, reports
 
 
+# ⭐ Updated priority logic
+# LOW = 0–9
+# REGULAR = 10–19
+# HIGH = 20+
 def classify_priority(reports: int) -> str:
-    if reports < 5:
-        return "NONE"
-    elif reports < 10:
-        return "NORMAL"
+    if reports <= 9:
+        return "LOW"
+    elif reports <= 19:
+        return "REGULAR"
     else:
         return "HIGH"
 
@@ -107,7 +111,7 @@ def main():
     else:
         event_type = "UPDATED" if not unchanged else "NONE"
 
-    # ⭐ Save BEFORE printing output
+    # Save BEFORE printing output
     if new_event or not unchanged:
         save_file(LAST_SUMMARY_FILE, summary)
         save_file(LAST_EVENT_FILE, event_url)
