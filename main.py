@@ -21,26 +21,27 @@ def extract_latest_event_url(html: str) -> str | None:
     return "https://fireball.amsmeteors.org" + m.group(1)
 
 
-def extract_summary_sentence(html: str) -> tuple[str | None, int, datetime | None]:
-    """
-    Extracts:
-      - summary sentence
-      - report count
-      - event timestamp (UTC)
-    """
+def extract_event_id(url: str | None) -> str | None:
+    if not url:
+        return None
+    m = re.search(r'/event/\d+/(\d+)', url)
+    if m:
+        return m.group(1)
+    # fallback: extract last number anywhere
+    m = re.findall(r'\d+', url)
+    return m[-1] if m else None
 
-    # Summary sentence
+
+def extract_summary_sentence(html: str) -> tuple[str | None, int, datetime | None]:
     m = re.search(r"We received .*? UT\.", html)
     if not m:
         return None, 0, None
 
     sentence = m.group(0)
 
-    # Report count
     count_match = re.search(r"We received (\d+)", sentence)
     reports = int(count_match.group(1)) if count_match else 0
 
-    # Extract event timestamp (AMS uses format like: "2024-01-15 03:22:10 UT")
     t = re.search(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) UT", html)
     if t:
         try:
@@ -81,9 +82,6 @@ def save_file(path: str, text: str):
 
 
 def main():
-    # -----------------------------
-    # Fetch browse page
-    # -----------------------------
     try:
         browse_html = fetch(BROWSE_URL)
     except Exception as e:
@@ -102,9 +100,6 @@ def main():
         print("URL=")
         sys.exit(0)
 
-    # -----------------------------
-    # Fetch event details
-    # -----------------------------
     try:
         details_html = fetch(event_url)
     except Exception as e:
@@ -124,24 +119,17 @@ def main():
         print(f"URL={event_url}")
         sys.exit(0)
 
-    # -----------------------------
-    # 8-hour look-back logic
-    # -----------------------------
     now = datetime.utcnow()
     lookback_start = now - timedelta(hours=8)
+    inside_window = event_time >= lookback_start if event_time else False
 
-    if event_time:
-        inside_window = event_time >= lookback_start
-    else:
-        inside_window = False  # If AMS doesn't give a timestamp, assume outside
-
-    # -----------------------------
-    # Compare with last saved event
-    # -----------------------------
     last_summary = load_file(LAST_SUMMARY_FILE)
-    last_event_url = load_file(LAST_EVENT_FILE)
+    last_event_raw = load_file(LAST_EVENT_FILE)
 
-    new_event = (event_url != last_event_url)
+    new_id = extract_event_id(event_url)
+    old_id = extract_event_id(last_event_raw)
+
+    new_event = (new_id != old_id)
     unchanged = (summary == last_summary)
 
     if new_event:
@@ -149,16 +137,12 @@ def main():
     else:
         event_type = "UPDATED" if not unchanged else "NONE"
 
-    # Save memory only if something changed
     if new_event or not unchanged:
         save_file(LAST_SUMMARY_FILE, summary)
         save_file(LAST_EVENT_FILE, event_url)
 
     status = classify_priority(reports)
 
-    # -----------------------------
-    # Output
-    # -----------------------------
     print(f"STATUS={status}")
     print(f"REPORTS={reports}")
     print(f"SUMMARY={summary}")
