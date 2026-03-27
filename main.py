@@ -2,59 +2,58 @@ import urllib.request
 import re
 import sys
 import os
+import json
 from datetime import datetime, timedelta
 
 BROWSE_URL = "https://fireball.amsmeteors.org/members/imo_view/browse_events"
-LAST_SUMMARY_FILE = "last_summary.txt"
-LAST_EVENT_FILE = "last_event_url.txt"
+EVENTS_FILE = "events.json"
 
 
+# -----------------------------
+# Fetch URL
+# -----------------------------
 def fetch(url: str) -> str:
     with urllib.request.urlopen(url, timeout=20) as resp:
         return resp.read().decode("utf-8", errors="ignore")
 
 
-def extract_latest_event_url(html: str) -> str | None:
-    m = re.search(r'href="(/members/imo_view/event/\d+[^"]*)"', html)
-    if not m:
-        return None
-    return "https://fireball.amsmeteors.org" + m.group(1)
+# -----------------------------
+# Extract top N event URLs
+# -----------------------------
+def extract_latest_event_urls(html: str, count=5) -> list[str]:
+    matches = re.findall(r'href="(/members/imo_view/event/\d+[^"]*)"', html)
+    urls = []
+    for m in matches[:count]:
+        urls.append("https://fireball.amsmeteors.org" + m)
+    return urls
 
 
+# -----------------------------
+# Extract event ID
+# -----------------------------
 def extract_event_id(url: str | None) -> str | None:
     if not url:
         return None
-
-    # Preferred: extract ID from /event/YYYY/ID
     m = re.search(r'/event/\d+/(\d+)', url)
     if m:
         return m.group(1)
-
-    # Fallback: last number in the string
     nums = re.findall(r'\d+', url)
     return nums[-1] if nums else None
 
 
-def extract_summary_sentence(html: str) -> tuple[str | None, int, datetime | None]:
-    """
-    Extracts:
-      - summary sentence
-      - report count
-      - event timestamp (UTC)
-    """
-
-    # More flexible summary extraction (AMS formatting changes safe)
+# -----------------------------
+# Extract summary, reports, timestamp
+# -----------------------------
+def extract_event_details(html: str):
     m = re.search(r"We received[\s\S]*?UT\.", html)
     if not m:
         return None, 0, None
 
     sentence = m.group(0)
 
-    # Report count
     count_match = re.search(r"We received (\d+)", sentence)
     reports = int(count_match.group(1)) if count_match else 0
 
-    # Extract event timestamp
     t = re.search(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) UT", html)
     if t:
         try:
@@ -67,6 +66,9 @@ def extract_summary_sentence(html: str) -> tuple[str | None, int, datetime | Non
     return sentence, reports, event_time
 
 
+# -----------------------------
+# Priority classification
+# -----------------------------
 def classify_priority(reports: int) -> str:
     if reports <= 9:
         return "LOW"
@@ -76,110 +78,114 @@ def classify_priority(reports: int) -> str:
         return "HIGH"
 
 
-def load_file(path: str) -> str | None:
-    if not os.path.exists(path):
-        return None
+# -----------------------------
+# Load stored events.json
+# -----------------------------
+def load_events():
+    if not os.path.exists(EVENTS_FILE):
+        return {}
     try:
-        with open(path, "r", encoding="utf-8") as f:
-            return f.read().strip()
+        with open(EVENTS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
     except Exception:
-        return None
+        return {}
 
 
-def save_file(path: str, text: str):
+# -----------------------------
+# Save updated events.json
+# -----------------------------
+def save_events(data):
     try:
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(text)
+        with open(EVENTS_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
     except Exception:
         pass
 
 
+# -----------------------------
+# Main
+# -----------------------------
 def main():
-    # -----------------------------
-    # Fetch browse page
-    # -----------------------------
     try:
         browse_html = fetch(BROWSE_URL)
     except Exception as e:
-        print("STATUS=ERROR")
         print(f"ERROR={e}")
         sys.exit(0)
 
-    event_url = extract_latest_event_url(browse_html)
-    if not event_url:
-        print("STATUS=NONE")
-        print("REPORTS=0")
-        print("SUMMARY=")
-        print("UNCHANGED=YES")
-        print("EVENT_TYPE=NONE")
-        print("INSIDE_WINDOW=NO")
-        print("URL=")
+    event_urls = extract_latest_event_urls(browse_html, count=5)
+    if not event_urls:
+        print("EVENT_COUNT=0")
         sys.exit(0)
 
-    # -----------------------------
-    # Fetch event details
-    # -----------------------------
-    try:
-        details_html = fetch(event_url)
-    except Exception as e:
-        print("STATUS=ERROR")
-        print(f"ERROR={e}")
-        sys.exit(0)
-
-    summary, reports, event_time = extract_summary_sentence(details_html)
-
-    if not summary:
-        # Summary extraction failed → treat as unchanged
-        print("STATUS=NONE")
-        print("REPORTS=0")
-        print("SUMMARY=")
-        print("UNCHANGED=YES")
-        print("EVENT_TYPE=NONE")
-        print("INSIDE_WINDOW=NO")
-        print(f"URL={event_url}")
-        sys.exit(0)
-
-    # -----------------------------
-    # 8-hour look-back logic
-    # -----------------------------
+    stored = load_events()
     now = datetime.utcnow()
     lookback_start = now - timedelta(hours=8)
-    inside_window = event_time >= lookback_start if event_time else False
 
-    # -----------------------------
-    # Compare with last saved event
-    # -----------------------------
-    last_summary = load_file(LAST_SUMMARY_FILE)
-    last_event_raw = load_file(LAST_EVENT_FILE)
+    output_lines = []
+    updated_events = {}
 
-    new_id = extract_event_id(event_url)
-    old_id = extract_event_id(last_event_raw)
+    index = 1
 
-    new_event = (new_id != old_id)
-    unchanged = (summary == last_summary)
+    for url in event_urls:
+        try:
+            html = fetch(url)
+        except Exception:
+            continue
 
-    if new_event:
-        event_type = "CONFIRMED"
-    else:
-        event_type = "UPDATED" if not unchanged else "NONE"
+        summary, reports, event_time = extract_event_details(html)
+        event_id = extract_event_id(url)
 
-    # Save memory only if something changed
-    if new_event or not unchanged:
-        save_file(LAST_SUMMARY_FILE, summary)
-        save_file(LAST_EVENT_FILE, event_url)
+        if not event_id or not summary:
+            continue
 
-    status = classify_priority(reports)
+        # Determine if inside 8-hour window
+        inside_window = event_time >= lookback_start if event_time else False
 
-    # -----------------------------
-    # Output
-    # -----------------------------
-    print(f"STATUS={status}")
-    print(f"REPORTS={reports}")
-    print(f"SUMMARY={summary}")
-    print(f"UNCHANGED={'YES' if unchanged else 'NO'}")
-    print(f"EVENT_TYPE={event_type}")
-    print(f"INSIDE_WINDOW={'YES' if inside_window else 'NO'}")
-    print(f"URL={event_url}")
+        # Compare with stored data
+        old = stored.get(event_id, {})
+        old_summary = old.get("summary")
+        old_reports = old.get("reports")
+
+        new_event = event_id not in stored
+        summary_changed = (summary != old_summary)
+        reports_changed = (reports != old_reports)
+
+        unchanged = not (new_event or summary_changed or reports_changed)
+
+        event_type = (
+            "CONFIRMED" if new_event else
+            ("UPDATED" if not unchanged else "NONE")
+        )
+
+        status = classify_priority(reports)
+
+        # Build output for GitHub Actions
+        prefix = f"EVENT_{index}"
+        output_lines.append(f"{prefix}_ID={event_id}")
+        output_lines.append(f"{prefix}_STATUS={status}")
+        output_lines.append(f"{prefix}_REPORTS={reports}")
+        output_lines.append(f"{prefix}_SUMMARY={summary}")
+        output_lines.append(f"{prefix}_UNCHANGED={'YES' if unchanged else 'NO'}")
+        output_lines.append(f"{prefix}_EVENT_TYPE={event_type}")
+        output_lines.append(f"{prefix}_INSIDE_WINDOW={'YES' if inside_window else 'NO'}")
+        output_lines.append(f"{prefix}_URL={url}")
+
+        # Save updated event info
+        updated_events[event_id] = {
+            "summary": summary,
+            "reports": reports,
+            "timestamp": event_time.isoformat() if event_time else None
+        }
+
+        index += 1
+
+    # Print all event outputs
+    print(f"EVENT_COUNT={index - 1}")
+    for line in output_lines:
+        print(line)
+
+    # Save updated memory
+    save_events(updated_events)
 
 
 if __name__ == "__main__":
