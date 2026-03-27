@@ -24,24 +24,37 @@ def extract_latest_event_url(html: str) -> str | None:
 def extract_event_id(url: str | None) -> str | None:
     if not url:
         return None
+
+    # Preferred: extract ID from /event/YYYY/ID
     m = re.search(r'/event/\d+/(\d+)', url)
     if m:
         return m.group(1)
-    # fallback: extract last number anywhere
-    m = re.findall(r'\d+', url)
-    return m[-1] if m else None
+
+    # Fallback: last number in the string
+    nums = re.findall(r'\d+', url)
+    return nums[-1] if nums else None
 
 
 def extract_summary_sentence(html: str) -> tuple[str | None, int, datetime | None]:
-    m = re.search(r"We received .*? UT\.", html)
+    """
+    Extracts:
+      - summary sentence
+      - report count
+      - event timestamp (UTC)
+    """
+
+    # More flexible summary extraction (AMS formatting changes safe)
+    m = re.search(r"We received[\s\S]*?UT\.", html)
     if not m:
         return None, 0, None
 
     sentence = m.group(0)
 
+    # Report count
     count_match = re.search(r"We received (\d+)", sentence)
     reports = int(count_match.group(1)) if count_match else 0
 
+    # Extract event timestamp
     t = re.search(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) UT", html)
     if t:
         try:
@@ -82,6 +95,9 @@ def save_file(path: str, text: str):
 
 
 def main():
+    # -----------------------------
+    # Fetch browse page
+    # -----------------------------
     try:
         browse_html = fetch(BROWSE_URL)
     except Exception as e:
@@ -100,6 +116,9 @@ def main():
         print("URL=")
         sys.exit(0)
 
+    # -----------------------------
+    # Fetch event details
+    # -----------------------------
     try:
         details_html = fetch(event_url)
     except Exception as e:
@@ -110,6 +129,7 @@ def main():
     summary, reports, event_time = extract_summary_sentence(details_html)
 
     if not summary:
+        # Summary extraction failed → treat as unchanged
         print("STATUS=NONE")
         print("REPORTS=0")
         print("SUMMARY=")
@@ -119,10 +139,16 @@ def main():
         print(f"URL={event_url}")
         sys.exit(0)
 
+    # -----------------------------
+    # 8-hour look-back logic
+    # -----------------------------
     now = datetime.utcnow()
     lookback_start = now - timedelta(hours=8)
     inside_window = event_time >= lookback_start if event_time else False
 
+    # -----------------------------
+    # Compare with last saved event
+    # -----------------------------
     last_summary = load_file(LAST_SUMMARY_FILE)
     last_event_raw = load_file(LAST_EVENT_FILE)
 
@@ -137,12 +163,16 @@ def main():
     else:
         event_type = "UPDATED" if not unchanged else "NONE"
 
+    # Save memory only if something changed
     if new_event or not unchanged:
         save_file(LAST_SUMMARY_FILE, summary)
         save_file(LAST_EVENT_FILE, event_url)
 
     status = classify_priority(reports)
 
+    # -----------------------------
+    # Output
+    # -----------------------------
     print(f"STATUS={status}")
     print(f"REPORTS={reports}")
     print(f"SUMMARY={summary}")
