@@ -30,51 +30,81 @@ jobs:
             fi
           done < output.txt
 
-      # ⭐ Send alert BEFORE updating memory
-      - name: Send ntfy notification
+      # ---------------------------------------------------------
+      # ⭐ Send notifications for EACH event that qualifies
+      # ---------------------------------------------------------
+      - name: Send ntfy notifications for all events
         id: notify
-        if: ${{ (env.STATUS == 'REGULAR' || env.STATUS == 'HIGH')
-              && env.UNCHANGED == 'NO'
-              && env.INSIDE_WINDOW == 'YES' }}
         env:
           NTFY_URL: ${{ secrets.NTFY_URL }}
         run: |
-          if [ "${STATUS}" = "HIGH" ]; then
-            PRIORITY=4
-          else
-            PRIORITY=3
-          fi
+          ALERT_SENT=false
 
-          if [ "${EVENT_TYPE}" = "UPDATED" ]; then
-            TITLE="☄️ Meteor Report Updated"
-          else
-            TITLE="☄️ NEW Meteor Report Confirmed"
-          fi
+          for i in 1 2 3 4 5; do
+            STATUS_VAR="EVENT_${i}_STATUS"
+            UNCHANGED_VAR="EVENT_${i}_UNCHANGED"
+            WINDOW_VAR="EVENT_${i}_INSIDE_WINDOW"
+            TYPE_VAR="EVENT_${i}_EVENT_TYPE"
+            SUMMARY_VAR="EVENT_${i}_SUMMARY"
 
-          if [ "${STATUS}" = "HIGH" ]; then
-            BULLET="🔺"
-          else
-            BULLET="🔸"
-          fi
+            STATUS="${!STATUS_VAR}"
+            UNCHANGED="${!UNCHANGED_VAR}"
+            INSIDE_WINDOW="${!WINDOW_VAR}"
+            EVENT_TYPE="${!TYPE_VAR}"
+            SUMMARY="${!SUMMARY_VAR}"
 
-          BODY="${BULLET} ${SUMMARY}"
+            # Skip if event doesn't exist
+            if [ -z "$STATUS" ]; then
+              continue
+            fi
 
-          curl \
-            -H "Title: ${TITLE}" \
-            -H "Priority: ${PRIORITY}" \
-            -d "${BODY}" \
-            "${NTFY_URL}"
+            # Apply your alert rules
+            if { [ "$STATUS" = "REGULAR" ] || [ "$STATUS" = "HIGH" ]; } \
+              && [ "$UNCHANGED" = "NO" ] \
+              && [ "$INSIDE_WINDOW" = "YES" ]; then
 
-      # ⭐ Only update memory IF the alert step actually ran
-      - name: Commit updated memory files
-        if: ${{ steps.notify.conclusion == 'success' }}
+              # Priority
+              if [ "$STATUS" = "HIGH" ]; then
+                PRIORITY=4
+                BULLET="🔺"
+              else
+                PRIORITY=3
+                BULLET="🔸"
+              fi
+
+              # Title
+              if [ "$EVENT_TYPE" = "UPDATED" ]; then
+                TITLE="☄️ Meteor Report Updated"
+              else
+                TITLE="☄️ NEW Meteor Report Confirmed"
+              fi
+
+              BODY="${BULLET} ${SUMMARY}"
+
+              curl \
+                -H "Title: ${TITLE}" \
+                -H "Priority: ${PRIORITY}" \
+                -d "${BODY}" \
+                "${NTFY_URL}"
+
+              ALERT_SENT=true
+            fi
+          done
+
+          echo "ALERT_SENT=$ALERT_SENT" >> $GITHUB_ENV
+
+      # ---------------------------------------------------------
+      # ⭐ Commit updated events.json ONLY if alerts were sent
+      # ---------------------------------------------------------
+      - name: Commit updated memory file
+        if: env.ALERT_SENT == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add last_summary.txt last_event_url.txt || true
+          git add events.json || true
 
           if ! git diff --cached --quiet; then
-            git commit -m "Update memory files [skip ci]"
+            git commit -m "Update events.json [skip ci]"
             git push
           fi
