@@ -2,7 +2,7 @@ name: AMS Monitor
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # every 5 minutes
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -30,32 +30,27 @@ jobs:
             fi
           done < output.txt
 
-      # ⭐ Notify ONLY if:
-      #   - Priority is REGULAR or HIGH
-      #   - Summary changed (UNCHANGED == NO)
-      #   - Event is inside the 8-hour window
+      # ⭐ Send alert BEFORE updating memory
       - name: Send ntfy notification
+        id: notify
         if: ${{ (env.STATUS == 'REGULAR' || env.STATUS == 'HIGH')
               && env.UNCHANGED == 'NO'
               && env.INSIDE_WINDOW == 'YES' }}
         env:
           NTFY_URL: ${{ secrets.NTFY_URL }}
         run: |
-          # Determine ntfy priority
           if [ "${STATUS}" = "HIGH" ]; then
             PRIORITY=4
           else
             PRIORITY=3
           fi
 
-          # Dynamic title based on event type
           if [ "${EVENT_TYPE}" = "UPDATED" ]; then
             TITLE="☄️ Meteor Report Updated"
           else
             TITLE="☄️ NEW Meteor Report Confirmed"
           fi
 
-          # Bullet icon based on priority tier
           if [ "${STATUS}" = "HIGH" ]; then
             BULLET="🔺"
           else
@@ -70,16 +65,15 @@ jobs:
             -d "${BODY}" \
             "${NTFY_URL}"
 
+      # ⭐ Only update memory IF the alert step actually ran
       - name: Commit updated memory files
-        if: ${{ env.UNCHANGED == 'NO' }}
+        if: ${{ steps.notify.conclusion == 'success' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Add memory files if they exist
           git add last_summary.txt last_event_url.txt || true
 
-          # Commit only if there are changes
           if ! git diff --cached --quiet; then
             git commit -m "Update memory files [skip ci]"
             git push
