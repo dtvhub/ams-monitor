@@ -58,26 +58,24 @@ jobs:
 
             # NEW event
             if [ "$EVENT_TYPE" = "NEW" ]; then
-              curl \
-                -H "Title: ☄️ NEW Meteor Event" \
-                -H "Priority: 4" \
-                -d "🔥 $SUMMARY
+              curl -H "Title: ☄️ NEW Meteor Event" \
+                   -H "Priority: 4" \
+                   -d "🔥 $SUMMARY
 
 Link: $URL" \
-                "${NTFY_URL}"
+                   "$NTFY_URL"
 
               ALERT_SENT=true
             fi
 
             # UPDATED event
             if [ "$EVENT_TYPE" = "UPDATED" ]; then
-              curl \
-                -H "Title: ☄️ Meteor Event Updated" \
-                -H "Priority: 3" \
-                -d "🔄 $SUMMARY
+              curl -H "Title: ☄️ Meteor Event Updated" \
+                   -H "Priority: 3" \
+                   -d "🔄 $SUMMARY
 
 Link: $URL" \
-                "${NTFY_URL}"
+                   "$NTFY_URL"
 
               ALERT_SENT=true
             fi
