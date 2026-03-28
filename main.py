@@ -22,10 +22,7 @@ def fetch(url: str) -> str:
 # -----------------------------
 def extract_latest_event_urls(html: str, count=5) -> list[str]:
     matches = re.findall(r'href="(/members/imo_view/event/\d+[^"]*)"', html)
-    urls = []
-    for m in matches[:count]:
-        urls.append("https://fireball.amsmeteors.org" + m)
-    return urls
+    return ["https://fireball.amsmeteors.org" + m for m in matches[:count]]
 
 
 # -----------------------------
@@ -106,12 +103,14 @@ def save_events(data):
 # Main
 # -----------------------------
 def main():
+    # Fetch the AMS browse page
     try:
         browse_html = fetch(BROWSE_URL)
     except Exception as e:
         print(f"ERROR={e}")
         sys.exit(0)
 
+    # Extract latest event URLs
     event_urls = extract_latest_event_urls(browse_html, count=5)
     if not event_urls:
         print("EVENT_COUNT=0")
@@ -152,10 +151,15 @@ def main():
 
         unchanged = not (new_event or summary_changed or reports_changed)
 
-        event_type = (
-            "CONFIRMED" if new_event else
-            ("UPDATED" if not unchanged else "NONE")
-        )
+        # -----------------------------
+        # Explicit NEW vs UPDATED logic
+        # -----------------------------
+        if new_event:
+            event_type = "NEW"
+        elif summary_changed or reports_changed:
+            event_type = "UPDATED"
+        else:
+            event_type = "NONE"
 
         status = classify_priority(reports)
 
