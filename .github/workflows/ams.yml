@@ -30,6 +30,9 @@ jobs:
             fi
           done < output.txt
 
+      # ---------------------------------------------------------
+      # ⭐ Send ntfy notifications for NEW + UPDATED events
+      # ---------------------------------------------------------
       - name: Send ntfy notifications for all events
         id: notify
         env:
@@ -40,29 +43,38 @@ jobs:
           for i in 1 2 3 4 5; do
             TYPE_VAR="EVENT_${i}_EVENT_TYPE"
             SUMMARY_VAR="EVENT_${i}_SUMMARY"
-            URL_VAR="EVENT_${i}_URL"
 
             EVENT_TYPE="${!TYPE_VAR}"
             SUMMARY="${!SUMMARY_VAR}"
-            URL="${!URL_VAR}"
 
             if [ -z "$EVENT_TYPE" ]; then
               continue
             fi
 
+            # NEW event
             if [ "$EVENT_TYPE" = "NEW" ]; then
-              curl -H "Title: NEW Meteor Event" -H "Priority: 4" -d "NEW: $SUMMARY\nLink: $URL" "$NTFY_URL"
+              curl -H "Title: ☄️ NEW Meteor Event" \
+                   -H "Priority: 4" \
+                   -d "🔥 $SUMMARY" \
+                   "$NTFY_URL"
               ALERT_SENT=true
             fi
 
+            # UPDATED event
             if [ "$EVENT_TYPE" = "UPDATED" ]; then
-              curl -H "Title: Meteor Event Updated" -H "Priority: 3" -d "UPDATED: $SUMMARY\nLink: $URL" "$NTFY_URL"
+              curl -H "Title: ☄️ Meteor Event Updated" \
+                   -H "Priority: 3" \
+                   -d "🔄 $SUMMARY" \
+                   "$NTFY_URL"
               ALERT_SENT=true
             fi
           done
 
           echo "ALERT_SENT=$ALERT_SENT" >> $GITHUB_ENV
 
+      # ---------------------------------------------------------
+      # ⭐ Commit updated events.json ONLY if alerts were sent
+      # ---------------------------------------------------------
       - name: Commit updated memory file
         if: env.ALERT_SENT == 'true'
         run: |
