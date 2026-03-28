@@ -31,7 +31,7 @@ jobs:
           done < output.txt
 
       # ---------------------------------------------------------
-      # ⭐ Send notifications for EACH event that qualifies
+      # ⭐ Send ntfy notifications for NEW + UPDATED events
       # ---------------------------------------------------------
       - name: Send ntfy notifications for all events
         id: notify
@@ -41,50 +41,42 @@ jobs:
           ALERT_SENT=false
 
           for i in 1 2 3 4 5; do
-            STATUS_VAR="EVENT_${i}_STATUS"
-            UNCHANGED_VAR="EVENT_${i}_UNCHANGED"
-            WINDOW_VAR="EVENT_${i}_INSIDE_WINDOW"
             TYPE_VAR="EVENT_${i}_EVENT_TYPE"
+            STATUS_VAR="EVENT_${i}_STATUS"
             SUMMARY_VAR="EVENT_${i}_SUMMARY"
+            URL_VAR="EVENT_${i}_URL"
 
-            STATUS="${!STATUS_VAR}"
-            UNCHANGED="${!UNCHANGED_VAR}"
-            INSIDE_WINDOW="${!WINDOW_VAR}"
             EVENT_TYPE="${!TYPE_VAR}"
+            STATUS="${!STATUS_VAR}"
             SUMMARY="${!SUMMARY_VAR}"
+            URL="${!URL_VAR}"
 
             # Skip if event doesn't exist
-            if [ -z "$STATUS" ]; then
+            if [ -z "$EVENT_TYPE" ]; then
               continue
             fi
 
-            # Apply your alert rules
-            if { [ "$STATUS" = "REGULAR" ] || [ "$STATUS" = "HIGH" ]; } \
-              && [ "$UNCHANGED" = "NO" ] \
-              && [ "$INSIDE_WINDOW" = "YES" ]; then
-
-              # Priority
-              if [ "$STATUS" = "HIGH" ]; then
-                PRIORITY=4
-                BULLET="🔺"
-              else
-                PRIORITY=3
-                BULLET="🔸"
-              fi
-
-              # Title
-              if [ "$EVENT_TYPE" = "UPDATED" ]; then
-                TITLE="☄️ Meteor Report Updated"
-              else
-                TITLE="☄️ NEW Meteor Report Confirmed"
-              fi
-
-              BODY="${BULLET} ${SUMMARY}"
-
+            # NEW event
+            if [ "$EVENT_TYPE" = "NEW" ]; then
               curl \
-                -H "Title: ${TITLE}" \
-                -H "Priority: ${PRIORITY}" \
-                -d "${BODY}" \
+                -H "Title: ☄️ NEW Meteor Event" \
+                -H "Priority: 4" \
+                -d "🔥 $SUMMARY
+
+Link: $URL" \
+                "${NTFY_URL}"
+
+              ALERT_SENT=true
+            fi
+
+            # UPDATED event
+            if [ "$EVENT_TYPE" = "UPDATED" ]; then
+              curl \
+                -H "Title: ☄️ Meteor Event Updated" \
+                -H "Priority: 3" \
+                -d "🔄 $SUMMARY
+
+Link: $URL" \
                 "${NTFY_URL}"
 
               ALERT_SENT=true
