@@ -1,7 +1,7 @@
 {
   "2282": {
-    "summary": "We received 8 reports about a fireball seen over Taranaki Region, Tasman Region, Waikato Region and Wellington Region on Monday, March 30th 2026 around 08:30 UT.",
-    "reports": 8,
+    "summary": "We received 10 reports about a fireball seen over Nelson Region, Taranaki Region, Tasman Region, Waikato Region and Wellington Region on Monday, March 30th 2026 around 08:30 UT.",
+    "reports": 10,
     "timestamp": null
   },
   "2275": {
@@ -10,18 +10,18 @@
     "timestamp": null
   },
   "2256": {
-    "summary": "We received 11 reports about a fireball seen over GA, IL, IN, LA, MS and TN on Sunday, March 29th 2026 around 04:16 UT.",
-    "reports": 11,
+    "summary": "We received 7 reports about a fireball seen over GA, IL, LA, MS and TN on Sunday, March 29th 2026 around 04:14 UT.",
+    "reports": 7,
+    "timestamp": null
+  },
+  "2283": {
+    "summary": "We received 6 reports about a fireball seen over IL and IN on Sunday, March 29th 2026 around 04:03 UT.",
+    "reports": 6,
     "timestamp": null
   },
   "2255": {
     "summary": "We received 121 reports about a fireball seen over British Columbia, OR and WA on Sunday, March 29th 2026 around 03:36 UT.",
     "reports": 121,
-    "timestamp": null
-  },
-  "2264": {
-    "summary": "We received 6 reports about a fireball seen over AL, FL and MS on Sunday, March 29th 2026 around 03:16 UT.",
-    "reports": 6,
     "timestamp": null
   }
 }
