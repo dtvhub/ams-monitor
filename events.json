@@ -1,17 +1,12 @@
 {
   "2347": {
-    "summary": "We received 12 reports about a fireball seen over AL, GA and TN on Thursday, April 2nd 2026 around 10:17 UT.",
-    "reports": 12,
-    "timestamp": null
-  },
-  "2343": {
-    "summary": "We received 5 reports about a fireball seen over FL and MS on Thursday, April 2nd 2026 around 05:16 UT.",
-    "reports": 5,
+    "summary": "We received 15 reports about a fireball seen over AL, GA, SC and TN on Thursday, April 2nd 2026 around 10:17 UT.",
+    "reports": 15,
     "timestamp": null
   },
   "2345": {
-    "summary": "We received 13 reports about a fireball seen over DC, NJ, PA and VA on Thursday, April 2nd 2026 around 00:18 UT.",
-    "reports": 13,
+    "summary": "We received 14 reports about a fireball seen over DC, NJ, PA and VA on Thursday, April 2nd 2026 around 00:18 UT.",
+    "reports": 14,
     "timestamp": null
   },
   "2348": {
@@ -20,8 +15,13 @@
     "timestamp": null
   },
   "2331": {
-    "summary": "We received 53 reports about a fireball seen over AL, AR, IL, IN, KY, MO, MS, OH and TN on Tuesday, March 31st 2026 around 03:02 UT.",
-    "reports": 53,
+    "summary": "We received 54 reports about a fireball seen over AL, AR, IL, IN, KY, MO, MS, OH and TN on Tuesday, March 31st 2026 around 03:02 UT.",
+    "reports": 54,
+    "timestamp": null
+  },
+  "2328": {
+    "summary": "We received 7 reports about a fireball seen over Bayern, Grand Est, Lombardia, Nordrhein-Westfalen, Rheinland-Pfalz and Trentino-Alto Adige on Tuesday, March 31st 2026 around 00:18 UT.",
+    "reports": 7,
     "timestamp": null
   }
 }
