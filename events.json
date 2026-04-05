@@ -1,4 +1,9 @@
 {
+  "2437": {
+    "summary": "We received 9 reports about a fireball seen over AZ, CA and NV on Sunday, April 5th 2026 around 04:12 UT.",
+    "reports": 9,
+    "timestamp": null
+  },
   "2438": {
     "summary": "We received 19 reports about a fireball seen over FL and GA on Sunday, April 5th 2026 around 01:36 UT.",
     "reports": 19,
@@ -17,11 +22,6 @@
   "2429": {
     "summary": "We received 7 reports about a fireball seen over IN, KY and TN on Saturday, April 4th 2026 around 03:43 UT.",
     "reports": 7,
-    "timestamp": null
-  },
-  "2416": {
-    "summary": "We received 43 reports about a fireball seen over Abruzzo, Emilia-Romagna, Friuli-Venezia Giulia, Lazio, Lombardia, Marche, Toscana, Trentino-Alto Adige, Umbria and Veneto on Friday, April 3rd 2026 around 19:47 UT.",
-    "reports": 43,
     "timestamp": null
   }
 }
