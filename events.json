@@ -1,4 +1,14 @@
 {
+  "2435": {
+    "summary": "We received 8 reports about a fireball seen over Emilia-Romagna, Lombardia, Marche, Toscana and Umbria on Sunday, April 5th 2026 around 00:46 UT.",
+    "reports": 8,
+    "timestamp": null
+  },
+  "2434": {
+    "summary": "We received 116 reports about a fireball seen over Baden-W\u00fcrttemberg, Brandenburg, Hamburg, Hessen, Lower Saxony, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Sk\u00e5ne l\u00e4n, Solothurn, Utrecht, Wojew\u00f3dztwo wielkopolskie and Wojew\u00f3dztwo zachodniopomorskie on Saturday, April 4th 2026 around 18:50 UT.",
+    "reports": 116,
+    "timestamp": null
+  },
   "2429": {
     "summary": "We received 7 reports about a fireball seen over IN, KY and TN on Saturday, April 4th 2026 around 03:43 UT.",
     "reports": 7,
@@ -12,16 +22,6 @@
   "2347": {
     "summary": "We received 15 reports about a fireball seen over AL, GA, SC and TN on Thursday, April 2nd 2026 around 10:17 UT.",
     "reports": 15,
-    "timestamp": null
-  },
-  "2345": {
-    "summary": "We received 14 reports about a fireball seen over DC, NJ, PA and VA on Thursday, April 2nd 2026 around 00:18 UT.",
-    "reports": 14,
-    "timestamp": null
-  },
-  "2348": {
-    "summary": "We received 5 reports about a fireball seen over Piemonte on Tuesday, March 31st 2026 around 18:02 UT.",
-    "reports": 5,
     "timestamp": null
   }
 }
