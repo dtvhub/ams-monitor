@@ -1,4 +1,19 @@
 {
+  "2492": {
+    "summary": "We received 12 reports about a fireball seen over Nouvelle-Aquitaine, Occitanie, Provence-Alpes-C\u00f4te d'Azur, Sardinia and Toscana on Sunday, April 5th 2026 around 21:34 UT.",
+    "reports": 12,
+    "timestamp": null
+  },
+  "2488": {
+    "summary": "We received 55 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Balearic Islands, Catalogne, Catalunya, Corse, Occitanie, Provence-Alpes-C\u00f4te d'Azur and Sardegna on Sunday, April 5th 2026 around 19:22 UT.",
+    "reports": 55,
+    "timestamp": null
+  },
+  "2481": {
+    "summary": "We received 6 reports about a fireball seen over Alberta on Sunday, April 5th 2026 around 06:30 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "2437": {
     "summary": "We received 10 reports about a fireball seen over AZ, CA and NV on Sunday, April 5th 2026 around 04:08 UT.",
     "reports": 10,
@@ -7,21 +22,6 @@
   "2438": {
     "summary": "We received 24 reports about a fireball seen over FL, GA and SC on Sunday, April 5th 2026 around 01:34 UT.",
     "reports": 24,
-    "timestamp": null
-  },
-  "2435": {
-    "summary": "We received 22 reports about a fireball seen over Bayern, Emilia-Romagna, K\u00e4rnten, Lombardia, Marche, Toscana, Umbria, Valle d'Aosta and Veneto on Sunday, April 5th 2026 around 00:48 UT.",
-    "reports": 22,
-    "timestamp": null
-  },
-  "2467": {
-    "summary": "We received 9 reports about a fireball seen over Baden-W\u00fcrttemberg, Lombardia, Solothurn and Veneto on Saturday, April 4th 2026 around 19:15 UT.",
-    "reports": 9,
-    "timestamp": null
-  },
-  "2466": {
-    "summary": "We received 8 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Saturday, April 4th 2026 around 19:11 UT.",
-    "reports": 8,
     "timestamp": null
   }
 }
