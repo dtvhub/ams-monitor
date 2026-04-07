@@ -1,4 +1,9 @@
 {
+  "2540": {
+    "summary": "We received 6 reports about a fireball seen over Alberta on Tuesday, April 7th 2026 around 06:24 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "2533": {
     "summary": "We received 6 reports about a fireball seen over OR and WA on Tuesday, April 7th 2026 around 05:34 UT.",
     "reports": 6,
@@ -10,18 +15,13 @@
     "timestamp": null
   },
   "2525": {
-    "summary": "We received 15 reports about a fireball seen over DC, MD, NY, PA and VA on Tuesday, April 7th 2026 around 01:00 UT.",
-    "reports": 15,
+    "summary": "We received 19 reports about a fireball seen over DC, MD, NC, NY, PA and VA on Tuesday, April 7th 2026 around 01:01 UT.",
+    "reports": 19,
     "timestamp": null
   },
   "2498": {
     "summary": "We received 5 reports about a fireball seen over LA and MS on Monday, April 6th 2026 around 01:22 UT.",
     "reports": 5,
-    "timestamp": null
-  },
-  "2492": {
-    "summary": "We received 11 reports about a fireball seen over Occitanie, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Sardinia and Toscana on Sunday, April 5th 2026 around 21:36 UT.",
-    "reports": 11,
     "timestamp": null
   }
 }
