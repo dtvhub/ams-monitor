@@ -1,12 +1,17 @@
 {
+  "2554": {
+    "summary": "We received 23 reports about a fireball seen over Drenthe, Mecklenburg-Vorpommern, Noord-Holland and Schleswig-Holstein on Tuesday, April 7th 2026 around 20:14 UT.",
+    "reports": 23,
+    "timestamp": null
+  },
   "2553": {
-    "summary": "We received 38 reports about a fireball seen over Emilia-Romagna, Liguria, Lombardia, Piemont, Piemonte, Toscana, Trentino-Alto Adige, Trentino-S\u00fcdtirol, Veneto and Z\u00fcrich on Tuesday, April 7th 2026 around 19:30 UT.",
-    "reports": 38,
+    "summary": "We received 42 reports about a fireball seen over Emilia-Romagna, Liguria, Lombardia, Piemont, Piemonte, Toscana, Trentino-Alto Adige, Trentino-S\u00fcdtirol, Veneto and Z\u00fcrich on Tuesday, April 7th 2026 around 19:30 UT.",
+    "reports": 42,
     "timestamp": null
   },
   "2543": {
-    "summary": "We received 230 reports about a fireball seen over CT, DE, NJ, NY and PA on Tuesday, April 7th 2026 around 18:34 UT.",
-    "reports": 230,
+    "summary": "We received 260 reports about a fireball seen over CT, DE, MD, NJ, NY and PA on Tuesday, April 7th 2026 around 18:34 UT.",
+    "reports": 260,
     "timestamp": null
   },
   "2540": {
@@ -17,11 +22,6 @@
   "2533": {
     "summary": "We received 9 reports about a fireball seen over OR and WA on Tuesday, April 7th 2026 around 05:34 UT.",
     "reports": 9,
-    "timestamp": null
-  },
-  "2528": {
-    "summary": "We received 5 reports about a fireball seen over CA on Tuesday, April 7th 2026 around 02:56 UT.",
-    "reports": 5,
     "timestamp": null
   }
 }
