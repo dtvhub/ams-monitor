@@ -1,7 +1,12 @@
 {
+  "2624": {
+    "summary": "We received 19 reports about a fireball seen over MD, PA, VA and WV on Thursday, April 9th 2026 around 08:36 UT.",
+    "reports": 19,
+    "timestamp": null
+  },
   "2618": {
-    "summary": "We received 8 reports about a fireball seen over IA, KS and NE on Thursday, April 9th 2026 around 04:01 UT.",
-    "reports": 8,
+    "summary": "We received 9 reports about a fireball seen over IA, KS and NE on Thursday, April 9th 2026 around 04:01 UT.",
+    "reports": 9,
     "timestamp": null
   },
   "2617": {
@@ -10,18 +15,13 @@
     "timestamp": null
   },
   "2610": {
-    "summary": "We received 25 reports about a fireball seen over CO, MT, NE, SD and WY on Thursday, April 9th 2026 around 02:27 UT.",
-    "reports": 25,
+    "summary": "We received 26 reports about a fireball seen over CO, MT, NE, SD and WY on Thursday, April 9th 2026 around 02:27 UT.",
+    "reports": 26,
     "timestamp": null
   },
   "2597": {
     "summary": "We received 6 reports about a fireball seen over Catalu\u00f1a, Nouvelle-Aquitaine and Occitanie on Wednesday, April 8th 2026 around 19:35 UT.",
     "reports": 6,
-    "timestamp": null
-  },
-  "2598": {
-    "summary": "We received 17 reports about a fireball seen over Baden-W\u00fcrttemberg, Emilia-Romagna, Friuli-Venezia Giulia, Lombardia, Piemonte, Primorsko-goranska \u017eupanija, Radovljica, Trentino-Alto Adige, Veneto, Vorarlberg and Z\u00fcrich on Wednesday, April 8th 2026 around 19:31 UT.",
-    "reports": 17,
     "timestamp": null
   }
 }
