@@ -1,27 +1,27 @@
 {
-  "2583": {
-    "summary": "We received 6 reports about a fireball seen over AK and Yukon on Wednesday, April 8th 2026 around 07:03 UT.",
+  "2618": {
+    "summary": "We received 8 reports about a fireball seen over IA, KS and NE on Thursday, April 9th 2026 around 04:01 UT.",
+    "reports": 8,
+    "timestamp": null
+  },
+  "2617": {
+    "summary": "We received 5 reports about a fireball seen over MA, NJ, NY, PA and RI on Thursday, April 9th 2026 around 03:37 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
+  "2610": {
+    "summary": "We received 25 reports about a fireball seen over CO, MT, NE, SD and WY on Thursday, April 9th 2026 around 02:27 UT.",
+    "reports": 25,
+    "timestamp": null
+  },
+  "2597": {
+    "summary": "We received 6 reports about a fireball seen over Catalu\u00f1a, Nouvelle-Aquitaine and Occitanie on Wednesday, April 8th 2026 around 19:35 UT.",
     "reports": 6,
     "timestamp": null
   },
-  "2573": {
-    "summary": "We received 7 reports about a fireball seen over CO on Wednesday, April 8th 2026 around 03:29 UT.",
-    "reports": 7,
-    "timestamp": null
-  },
-  "2571": {
-    "summary": "We received 6 reports about a fireball seen over NJ, NY and VA on Wednesday, April 8th 2026 around 03:11 UT.",
-    "reports": 6,
-    "timestamp": null
-  },
-  "2561": {
-    "summary": "We received 10 reports about a fireball seen over \u00cele-de-France, Bretagne, Centre-Val de Loire, Normandie, Nouvelle-Aquitaine and Pays de la Loire on Tuesday, April 7th 2026 around 22:08 UT.",
-    "reports": 10,
-    "timestamp": null
-  },
-  "2557": {
-    "summary": "We received 9 reports about a fireball seen over Centre-Val de Loire, England, Normandie and Nouvelle-Aquitaine on Tuesday, April 7th 2026 around 20:22 UT.",
-    "reports": 9,
+  "2598": {
+    "summary": "We received 17 reports about a fireball seen over Baden-W\u00fcrttemberg, Emilia-Romagna, Friuli-Venezia Giulia, Lombardia, Piemonte, Primorsko-goranska \u017eupanija, Radovljica, Trentino-Alto Adige, Veneto, Vorarlberg and Z\u00fcrich on Wednesday, April 8th 2026 around 19:31 UT.",
+    "reports": 17,
     "timestamp": null
   }
 }
