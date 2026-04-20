@@ -1,4 +1,9 @@
 {
+  "2837": {
+    "summary": "We received 547 reports about a fireball seen over Aargau, Auvergne-Rh\u00f4ne-Alpes, \u00cele-de-France, Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brussel, Bruxelles, CA, Centre-Val de Loire, Drenthe, England, Flanders, Friesland, Grand Est, Hauts-de-France, Kyiv, Limburg, Luxembourg, Noord-Brabant and Nordrhein-We on Sunday, April 19th 2026 around 19:40 UT.",
+    "reports": 547,
+    "timestamp": null
+  },
   "2808": {
     "summary": "We received 15 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Liguria, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Wednesday, April 15th 2026 around 22:33 UT.",
     "reports": 15,
@@ -17,11 +22,6 @@
   "2785": {
     "summary": "We received 10 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Catalunya, Nouvelle-Aquitaine, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Tuesday, April 14th 2026 around 21:25 UT.",
     "reports": 10,
-    "timestamp": null
-  },
-  "2769": {
-    "summary": "We received 89 reports about a fireball seen over DE, FL, GA, MD, NC, NJ, NY, PA, SC, TN, VA and WV on Tuesday, April 14th 2026 around 09:38 UT.",
-    "reports": 89,
     "timestamp": null
   }
 }
