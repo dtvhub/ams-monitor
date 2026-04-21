@@ -4,11 +4,6 @@
     "reports": 14,
     "timestamp": null
   },
-  "2876": {
-    "summary": "We received 7 reports about a fireball seen over \u00cele-de-France, Centre-Val de Loire, England, Hauts-de-France and Scotland on Monday, April 20th 2026 around 23:08 UT.",
-    "reports": 7,
-    "timestamp": null
-  },
   "2837": {
     "summary": "We received 768 reports about a fireball seen over Aargau, Auvergne-Rh\u00f4ne-Alpes, \u00cele-de-France, Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brussel, Bruxelles, CA, Centre-Val de Loire, Drenthe, England, Flanders, Friesland, Grand Est, Grevenmacher, Hauts-de-France, Kyiv, La Trinit\u00e9, Limburg, Lombardia and Lu on Sunday, April 19th 2026 around 19:39 UT.",
     "reports": 768,
@@ -21,6 +16,11 @@
   },
   "2845": {
     "summary": "We received 5 reports about a fireball seen over DE, NY and VA on Saturday, April 18th 2026 around 01:56 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
+  "2846": {
+    "summary": "We received 5 reports about a fireball seen over FL on Saturday, April 18th 2026 around 01:38 UT.",
     "reports": 5,
     "timestamp": null
   }
