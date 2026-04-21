@@ -1,7 +1,12 @@
 {
+  "2873": {
+    "summary": "We received 14 reports about a fireball seen over MD, NH, NY, Ontario, PA and Qu\u00e9bec on Tuesday, April 21st 2026 around 02:34 UT.",
+    "reports": 14,
+    "timestamp": null
+  },
   "2837": {
-    "summary": "We received 719 reports about a fireball seen over Aargau, Auvergne-Rh\u00f4ne-Alpes, \u00cele-de-France, Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brussel, Bruxelles, CA, Centre-Val de Loire, Drenthe, England, Flanders, Friesland, Grand Est, Hauts-de-France, Kyiv, Limburg, Luxembourg, Noord-Brabant and Nordrhein-We on Sunday, April 19th 2026 around 19:39 UT.",
-    "reports": 719,
+    "summary": "We received 759 reports about a fireball seen over Aargau, Auvergne-Rh\u00f4ne-Alpes, \u00cele-de-France, Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brussel, Bruxelles, CA, Centre-Val de Loire, Drenthe, England, Flanders, Friesland, Grand Est, Grevenmacher, Hauts-de-France, Kyiv, La Trinit\u00e9, Limburg, Luxembourg and N on Sunday, April 19th 2026 around 19:39 UT.",
+    "reports": 759,
     "timestamp": null
   },
   "2872": {
@@ -17,11 +22,6 @@
   "2846": {
     "summary": "We received 5 reports about a fireball seen over FL on Saturday, April 18th 2026 around 01:38 UT.",
     "reports": 5,
-    "timestamp": null
-  },
-  "2842": {
-    "summary": "We received 21 reports about a fireball seen over \u0141\u00f3d\u017a Voivodeship, Berlin, Brandenburg, Bratislavsk\u00fd kraj, Lviv Oblast, Nieder\u00f6sterreich, Pre\u0161ov Region, Sachsen, St\u0159edo\u010desk\u00fd kraj, Wojew\u00f3dztwo dolno\u015bl\u0105skie, Wojew\u00f3dztwo mazowieckie and Wojew\u00f3dztwo opolskie on Friday, April 17th 2026 around 18:54 UT.",
-    "reports": 21,
     "timestamp": null
   }
 }
