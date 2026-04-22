@@ -5,8 +5,13 @@
     "timestamp": null
   },
   "2837": {
-    "summary": "We received 768 reports about a fireball seen over Aargau, Auvergne-Rh\u00f4ne-Alpes, \u00cele-de-France, Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brussel, Bruxelles, CA, Centre-Val de Loire, Drenthe, England, Flanders, Friesland, Grand Est, Grevenmacher, Hauts-de-France, Kyiv, La Trinit\u00e9, Limburg, Lombardia and Lu on Sunday, April 19th 2026 around 19:39 UT.",
-    "reports": 768,
+    "summary": "We received 766 reports about a fireball seen over Aargau, Auvergne-Rh\u00f4ne-Alpes, \u00cele-de-France, Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brussel, Bruxelles, Centre-Val de Loire, Drenthe, England, Flanders, Friesland, Grand Est, Grevenmacher, Hauts-de-France, La Trinit\u00e9, Limburg, Luxembourg and Noord-Bra on Sunday, April 19th 2026 around 19:39 UT.",
+    "reports": 766,
+    "timestamp": null
+  },
+  "2918": {
+    "summary": "We received 13 reports about a fireball seen over CA on Sunday, April 19th 2026 around 17:36 UT.",
+    "reports": 13,
     "timestamp": null
   },
   "2898": {
@@ -17,11 +22,6 @@
   "2896": {
     "summary": "We received 18 reports about a fireball seen over ID and MT on Saturday, April 18th 2026 around 19:06 UT.",
     "reports": 18,
-    "timestamp": null
-  },
-  "2872": {
-    "summary": "We received 25 reports about a fireball seen over AZ, CA, CO, NM, TX and UT on Saturday, April 18th 2026 around 04:44 UT.",
-    "reports": 25,
     "timestamp": null
   }
 }
