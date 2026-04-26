@@ -1,4 +1,14 @@
 {
+  "3089": {
+    "summary": "We received 16 reports about a fireball seen over England and Scotland on Saturday, April 25th 2026 around 21:09 UT.",
+    "reports": 16,
+    "timestamp": null
+  },
+  "3064": {
+    "summary": "We received 7 reports about a fireball seen over Aargau, Appenzell Ausserrhoden, Bayern, Lombardia, Nordrhein-Westfalen, Rheinland-Pfalz and Zurich on Friday, April 24th 2026 around 23:31 UT.",
+    "reports": 7,
+    "timestamp": null
+  },
   "3062": {
     "summary": "We received 26 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Catalunya, Corse, Emilia-Romagna, Lazio, Lombardia, Occitanie, Provence-Alpes-C\u00f4te d'Azur, Sardegna, Toscana, Tuscany, Umbria and Veneto on Friday, April 24th 2026 around 19:56 UT.",
     "reports": 26,
@@ -12,16 +22,6 @@
   "3042": {
     "summary": "We received 353 reports about a fireball seen over Aargau, Abruzzo, Auvergne-Rh\u00f4ne-Alpes, Baden-W\u00fcrttemberg, Basel-Landschaft, Bayern, Bern, Bourgogne-Franche-Comt\u00e9, Campania, Catalogna, Catalunya, Centre-Val de Loire, Corse, Emilia-Romagna, Friuli-Venezia Giulia, Gen\u00e8ve, Grand Est, Hauts-de-France, Hessen, Lazio and Ligur on Thursday, April 23rd 2026 around 22:45 UT.",
     "reports": 353,
-    "timestamp": null
-  },
-  "3026": {
-    "summary": "We received 32 reports about a fireball seen over CO, ID, NE, OR, UT and WY on Thursday, April 23rd 2026 around 10:50 UT.",
-    "reports": 32,
-    "timestamp": null
-  },
-  "3036": {
-    "summary": "We received 10 reports about a fireball seen over CA on Thursday, April 23rd 2026 around 08:55 UT.",
-    "reports": 10,
     "timestamp": null
   }
 }
