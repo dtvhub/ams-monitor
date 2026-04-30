@@ -1,4 +1,9 @@
 {
+  "3176": {
+    "summary": "We received 12 reports about a fireball seen over CA and NV on Thursday, April 30th 2026 around 04:14 UT.",
+    "reports": 12,
+    "timestamp": null
+  },
   "3168": {
     "summary": "We received 135 reports about a fireball seen over British Columbia, OR and WA on Wednesday, April 29th 2026 around 07:11 UT.",
     "reports": 135,
@@ -17,11 +22,6 @@
   "3143": {
     "summary": "We received 22 reports about a fireball seen over NC, SC and VA on Tuesday, April 28th 2026 around 00:48 UT.",
     "reports": 22,
-    "timestamp": null
-  },
-  "3139": {
-    "summary": "We received 9 reports about a fireball seen over County Donegal, England, Northern Ireland and Scotland on Monday, April 27th 2026 around 22:44 UT.",
-    "reports": 9,
     "timestamp": null
   }
 }
