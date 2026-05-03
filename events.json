@@ -1,7 +1,12 @@
 {
+  "3248": {
+    "summary": "We received 8 reports about a fireball seen over CA on Sunday, May 3rd 2026 around 04:32 UT.",
+    "reports": 8,
+    "timestamp": null
+  },
   "3237": {
-    "summary": "We received 6 reports about a fireball seen over Banskobystrick\u00fd kraj, K\u00e4rnten, Nieder\u00f6sterreich, Trnavsk\u00fd kraj and Wien on Saturday, May 2nd 2026 around 18:48 UT.",
-    "reports": 6,
+    "summary": "We received 8 reports about a fireball seen over Banskobystrick\u00fd kraj, K\u00e4rnten, Nieder\u00f6sterreich, Trnavsk\u00fd kraj and Wien on Saturday, May 2nd 2026 around 18:51 UT.",
+    "reports": 8,
     "timestamp": null
   },
   "3224": {
@@ -15,13 +20,8 @@
     "timestamp": null
   },
   "3218": {
-    "summary": "We received 201 reports about a fireball seen over Abruzzo, Auvergne-Rh\u00f4ne-Alpes, Baden-W\u00fcrttemberg, Basel-Stadt, Basilicata, Bavaria, Bayern, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brod-Posavina County, Campania, Corse, Emilia-Romagna, England, Friesland, Friuli-Venezia Giulia, Gen\u00e8ve, Grand Est, Hauts-de-France and Hess on Friday, May 1st 2026 around 20:10 UT.",
-    "reports": 201,
-    "timestamp": null
-  },
-  "3217": {
-    "summary": "We received 7 reports about a fireball seen over Abruzzo, Emilia-Romagna, Friuli-Venezia Giulia, Lazio, Marche and Vorarlberg on Friday, May 1st 2026 around 19:51 UT.",
-    "reports": 7,
+    "summary": "We received 206 reports about a fireball seen over Abruzzo, Auvergne-Rh\u00f4ne-Alpes, Baden-W\u00fcrttemberg, Basel-Stadt, Basilicata, Bavaria, Bayern, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Brod-Posavina County, Campania, Corse, Emilia-Romagna, England, Friesland, Friuli-Venezia Giulia, Gen\u00e8ve, Grand Est, Hauts-de-France and Hess on Friday, May 1st 2026 around 20:09 UT.",
+    "reports": 206,
     "timestamp": null
   }
 }
