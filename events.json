@@ -1,4 +1,14 @@
 {
+  "3519": {
+    "summary": "We received 13 reports about a fireball seen over Berlin, Brandenburg, Hamburg, Schleswig-Holstein and Th\u00fcringen on Friday, May 15th 2026 around 01:30 UT.",
+    "reports": 13,
+    "timestamp": null
+  },
+  "3518": {
+    "summary": "We received 5 reports about a fireball seen over Berlin, Brandenburg and Th\u00fcringen on Thursday, May 14th 2026 around 21:12 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "3504": {
     "summary": "We received 12 reports about a fireball seen over AZ on Thursday, May 14th 2026 around 06:45 UT.",
     "reports": 12,
@@ -12,16 +22,6 @@
   "3426": {
     "summary": "We received 37 reports about a fireball seen over Corse, Emilia-Romagna, Lazio, Liguria, Lombardia, Marche, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Puglia, Sardegna, Toscana, Tuscany and Veneto on Monday, May 11th 2026 around 21:56 UT.",
     "reports": 37,
-    "timestamp": null
-  },
-  "3427": {
-    "summary": "We received 12 reports about a fireball seen over MA, NH, NY and VT on Monday, May 11th 2026 around 03:27 UT.",
-    "reports": 12,
-    "timestamp": null
-  },
-  "3428": {
-    "summary": "We received 12 reports about a fireball seen over NC and SC on Monday, May 11th 2026 around 01:39 UT.",
-    "reports": 12,
     "timestamp": null
   }
 }
