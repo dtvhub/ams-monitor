@@ -1,12 +1,17 @@
 {
+  "3530": {
+    "summary": "We received 6 reports about a fireball seen over IN, OH, PA and WV on Friday, May 15th 2026 around 05:20 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "3519": {
-    "summary": "We received 13 reports about a fireball seen over Berlin, Brandenburg, Hamburg, Schleswig-Holstein and Th\u00fcringen on Friday, May 15th 2026 around 01:30 UT.",
-    "reports": 13,
+    "summary": "We received 14 reports about a fireball seen over Bayern, Berlin, Brandenburg, Hamburg, Schleswig-Holstein and Th\u00fcringen on Friday, May 15th 2026 around 01:30 UT.",
+    "reports": 14,
     "timestamp": null
   },
   "3518": {
-    "summary": "We received 5 reports about a fireball seen over Berlin, Brandenburg and Th\u00fcringen on Thursday, May 14th 2026 around 21:12 UT.",
-    "reports": 5,
+    "summary": "We received 6 reports about a fireball seen over Bayern, Berlin, Brandenburg and Th\u00fcringen on Thursday, May 14th 2026 around 21:12 UT.",
+    "reports": 6,
     "timestamp": null
   },
   "3504": {
@@ -15,13 +20,8 @@
     "timestamp": null
   },
   "3484": {
-    "summary": "We received 14 reports about a fireball seen over Hamburg, Mecklenburg-Vorpommern and Schleswig-Holstein on Thursday, May 14th 2026 around 00:28 UT.",
-    "reports": 14,
-    "timestamp": null
-  },
-  "3426": {
-    "summary": "We received 37 reports about a fireball seen over Corse, Emilia-Romagna, Lazio, Liguria, Lombardia, Marche, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Puglia, Sardegna, Toscana, Tuscany and Veneto on Monday, May 11th 2026 around 21:56 UT.",
-    "reports": 37,
+    "summary": "We received 15 reports about a fireball seen over Hamburg, Mecklenburg-Vorpommern and Schleswig-Holstein on Thursday, May 14th 2026 around 00:28 UT.",
+    "reports": 15,
     "timestamp": null
   }
 }
