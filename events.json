@@ -1,4 +1,9 @@
 {
+  "3546": {
+    "summary": "We received 5 reports about a fireball seen over Friesland, Niedersachsen and Noord-Holland on Saturday, May 16th 2026 around 02:17 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "3530": {
     "summary": "We received 6 reports about a fireball seen over IN, OH, PA and WV on Friday, May 15th 2026 around 05:20 UT.",
     "reports": 6,
@@ -17,11 +22,6 @@
   "3504": {
     "summary": "We received 12 reports about a fireball seen over AZ on Thursday, May 14th 2026 around 06:45 UT.",
     "reports": 12,
-    "timestamp": null
-  },
-  "3484": {
-    "summary": "We received 15 reports about a fireball seen over Hamburg, Mecklenburg-Vorpommern and Schleswig-Holstein on Thursday, May 14th 2026 around 00:28 UT.",
-    "reports": 15,
     "timestamp": null
   }
 }
