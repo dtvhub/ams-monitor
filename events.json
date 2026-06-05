@@ -1,4 +1,14 @@
 {
+  "4014": {
+    "summary": "We received 7 reports about a fireball seen over Campania and Sicilia on Friday, June 5th 2026 around 00:20 UT.",
+    "reports": 7,
+    "timestamp": null
+  },
+  "4013": {
+    "summary": "We received 19 reports about a fireball seen over Abruzzo, Basilicata, Campania, Lazio, Toscana and Umbria on Thursday, June 4th 2026 around 20:32 UT.",
+    "reports": 19,
+    "timestamp": null
+  },
   "4011": {
     "summary": "We received 5 reports about a fireball seen over CA on Thursday, June 4th 2026 around 04:23 UT.",
     "reports": 5,
@@ -12,16 +22,6 @@
   "3969": {
     "summary": "We received 300 reports about a fireball seen over Aargau, Auvergne-Rh\u00f4ne-Alpes, \u00cele-de-France, Baden-W\u00fcrttemberg, Basel-Landschaft, Basel-Stadt, Bayern, Bern, Bourgogne-Franche-Comt\u00e9, Bretagne, Centre-Val de Loire, Esch-Uelzecht, Grand Est, Hauts-de-France, Hessen, Luxembourg, Noord-Brabant, Nordrhein-Westfalen and Norm on Tuesday, June 2nd 2026 around 20:29 UT.",
     "reports": 300,
-    "timestamp": null
-  },
-  "3982": {
-    "summary": "We received 10 reports about a fireball seen over GA, IN, MI, OH, SC and TN on Tuesday, June 2nd 2026 around 08:44 UT.",
-    "reports": 10,
-    "timestamp": null
-  },
-  "3967": {
-    "summary": "We received 20 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Grand Est, Nouvelle-Aquitaine, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Tuesday, June 2nd 2026 around 03:20 UT.",
-    "reports": 20,
     "timestamp": null
   }
 }
