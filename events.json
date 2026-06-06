@@ -1,4 +1,14 @@
 {
+  "4101": {
+    "summary": "We received 10 reports about a fireball seen over CA on Saturday, June 6th 2026 around 03:54 UT.",
+    "reports": 10,
+    "timestamp": null
+  },
+  "4080": {
+    "summary": "We received 5 reports about a fireball seen over CO and NM on Friday, June 5th 2026 around 07:33 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "4014": {
     "summary": "We received 8 reports about a fireball seen over Campania and Sicilia on Friday, June 5th 2026 around 00:19 UT.",
     "reports": 8,
@@ -12,16 +22,6 @@
   "4011": {
     "summary": "We received 5 reports about a fireball seen over CA on Thursday, June 4th 2026 around 04:23 UT.",
     "reports": 5,
-    "timestamp": null
-  },
-  "4012": {
-    "summary": "We received 5 reports about a fireball seen over Abruzzo, Emilia-Romagna and Lazio on Wednesday, June 3rd 2026 around 22:38 UT.",
-    "reports": 5,
-    "timestamp": null
-  },
-  "4000": {
-    "summary": "We received 15 reports about a fireball seen over AL, FL, GA and TN on Wednesday, June 3rd 2026 around 04:07 UT.",
-    "reports": 15,
     "timestamp": null
   }
 }
