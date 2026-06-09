@@ -9,6 +9,11 @@
     "reports": 50,
     "timestamp": null
   },
+  "4184": {
+    "summary": "We received 9 reports about a fireball seen over CT, NJ, NY and Ontario on Tuesday, June 9th 2026 around 02:44 UT.",
+    "reports": 9,
+    "timestamp": null
+  },
   "4176": {
     "summary": "We received 6 reports about a fireball seen over Bretagne and England on Monday, June 8th 2026 around 21:09 UT.",
     "reports": 6,
@@ -17,11 +22,6 @@
   "4165": {
     "summary": "We received 5 reports about a fireball seen over Paran\u00e1 and S\u00e3o Paulo on Monday, June 8th 2026 around 08:17 UT.",
     "reports": 5,
-    "timestamp": null
-  },
-  "4154": {
-    "summary": "We received 6 reports about a fireball seen over AZ and Sonora on Monday, June 8th 2026 around 03:35 UT.",
-    "reports": 6,
     "timestamp": null
   }
 }
