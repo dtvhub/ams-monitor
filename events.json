@@ -1,7 +1,12 @@
 {
+  "4240": {
+    "summary": "We received 9 reports about a fireball seen over England on Wednesday, June 10th 2026 around 23:21 UT.",
+    "reports": 9,
+    "timestamp": null
+  },
   "4207": {
-    "summary": "We received 15 reports about a fireball seen over England on Wednesday, June 10th 2026 around 22:40 UT.",
-    "reports": 15,
+    "summary": "We received 11 reports about a fireball seen over England on Wednesday, June 10th 2026 around 22:09 UT.",
+    "reports": 11,
     "timestamp": null
   },
   "4203": {
@@ -10,18 +15,13 @@
     "timestamp": null
   },
   "4202": {
-    "summary": "We received 81 reports about a fireball seen over CA and NV on Wednesday, June 10th 2026 around 08:40 UT.",
-    "reports": 81,
+    "summary": "We received 90 reports about a fireball seen over CA and NV on Wednesday, June 10th 2026 around 08:41 UT.",
+    "reports": 90,
     "timestamp": null
   },
   "4216": {
-    "summary": "We received 5 reports about a fireball seen over MA, NH, NY and VT on Wednesday, June 10th 2026 around 07:36 UT.",
-    "reports": 5,
-    "timestamp": null
-  },
-  "4214": {
-    "summary": "We received 5 reports about a fireball seen over AZ on Wednesday, June 10th 2026 around 05:01 UT.",
-    "reports": 5,
+    "summary": "We received 8 reports about a fireball seen over CT, MA, NH, NY, PA and VT on Wednesday, June 10th 2026 around 07:32 UT.",
+    "reports": 8,
     "timestamp": null
   }
 }
