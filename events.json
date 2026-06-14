@@ -1,12 +1,17 @@
 {
   "4327": {
-    "summary": "We received 19 reports about a fireball seen over Coahuila de Zaragoza and TX on Sunday, June 14th 2026 around 02:38 UT.",
-    "reports": 19,
+    "summary": "We received 20 reports about a fireball seen over Coahuila de Zaragoza and TX on Sunday, June 14th 2026 around 02:38 UT.",
+    "reports": 20,
     "timestamp": null
   },
   "4326": {
-    "summary": "We received 32 reports about a fireball seen over NC, OH, PA, VA and WV on Sunday, June 14th 2026 around 02:18 UT.",
-    "reports": 32,
+    "summary": "We received 41 reports about a fireball seen over NC, OH, PA, VA and WV on Sunday, June 14th 2026 around 02:18 UT.",
+    "reports": 41,
+    "timestamp": null
+  },
+  "4318": {
+    "summary": "We received 6 reports about a fireball seen over Emilia-Romagna, Lazio, Lombardia and Veneto on Saturday, June 13th 2026 around 20:42 UT.",
+    "reports": 6,
     "timestamp": null
   },
   "4300": {
@@ -17,11 +22,6 @@
   "4303": {
     "summary": "We received 9 reports about a fireball seen over WA on Saturday, June 13th 2026 around 06:34 UT.",
     "reports": 9,
-    "timestamp": null
-  },
-  "4304": {
-    "summary": "We received 8 reports about a fireball seen over AZ, CA and NV on Saturday, June 13th 2026 around 06:29 UT.",
-    "reports": 8,
     "timestamp": null
   }
 }
