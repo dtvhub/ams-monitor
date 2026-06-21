@@ -1,27 +1,27 @@
 {
-  "4483": {
-    "summary": "We received 8 reports about a fireball seen over England on Saturday, June 20th 2026 around 01:28 UT.",
-    "reports": 8,
-    "timestamp": null
-  },
-  "4482": {
-    "summary": "We received 93 reports about a fireball seen over MI, OH and Ontario on Saturday, June 20th 2026 around 00:12 UT.",
-    "reports": 93,
-    "timestamp": null
-  },
-  "4496": {
-    "summary": "We received 7 reports about a fireball seen over MI, OH and Ontario on Friday, June 19th 2026 around 12:12 UT.",
+  "4592": {
+    "summary": "We received 7 reports about a fireball seen over OK on Sunday, June 21st 2026 around 04:24 UT.",
     "reports": 7,
     "timestamp": null
   },
-  "4474": {
-    "summary": "We received 12 reports about a fireball seen over NV and UT on Thursday, June 18th 2026 around 04:23 UT.",
-    "reports": 12,
+  "4590": {
+    "summary": "We received 6 reports about a fireball seen over MD, NJ and VA on Sunday, June 21st 2026 around 03:39 UT.",
+    "reports": 6,
     "timestamp": null
   },
-  "4472": {
-    "summary": "We received 10 reports about a fireball seen over GA, NC and SC on Thursday, June 18th 2026 around 03:31 UT.",
-    "reports": 10,
+  "4587": {
+    "summary": "We received 5 reports about a fireball seen over DC, NC and VA on Sunday, June 21st 2026 around 02:40 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
+  "4576": {
+    "summary": "We received 24 reports about a fireball seen over Bayern, Berlin, Brandenburg, Lubusz Voivodeship, Ober\u00f6sterreich, Sachsen, Th\u00fcringen, Trnavsk\u00fd kraj and Wojew\u00f3dztwo \u0142\u00f3dzkie on Saturday, June 20th 2026 around 20:53 UT.",
+    "reports": 24,
+    "timestamp": null
+  },
+  "4493": {
+    "summary": "We received 19 reports about a fireball seen over CT, MD, NC, NJ, OH, Ontario, RI, VA and WV on Saturday, June 20th 2026 around 08:06 UT.",
+    "reports": 19,
     "timestamp": null
   }
 }
