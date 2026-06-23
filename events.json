@@ -1,7 +1,12 @@
 {
+  "4638": {
+    "summary": "We received 6 reports about a fireball seen over Paran\u00e1 and S\u00e3o Paulo on Monday, June 22nd 2026 around 09:40 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "4625": {
-    "summary": "We received 15 reports about a fireball seen over New South Wales and South Australia on Monday, June 22nd 2026 around 08:26 UT.",
-    "reports": 15,
+    "summary": "We received 16 reports about a fireball seen over New South Wales and South Australia on Monday, June 22nd 2026 around 08:26 UT.",
+    "reports": 16,
     "timestamp": null
   },
   "4624": {
@@ -16,11 +21,6 @@
   },
   "4622": {
     "summary": "We received 8 reports about a fireball seen over CA on Monday, June 22nd 2026 around 03:46 UT.",
-    "reports": 8,
-    "timestamp": null
-  },
-  "4621": {
-    "summary": "We received 8 reports about a fireball seen over MA, ME, NH and VT on Monday, June 22nd 2026 around 01:29 UT.",
     "reports": 8,
     "timestamp": null
   }
