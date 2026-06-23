@@ -1,4 +1,19 @@
 {
+  "4656": {
+    "summary": "We received 5 reports about a fireball seen over Ankara, Bolu, Kayseri and Zonguldak on Monday, June 22nd 2026 around 22:27 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
+  "4657": {
+    "summary": "We received 8 reports about a fireball seen over Federation of Bosnia and Herzegovina, Osje\u010dko-baranjska \u017eupanija, Primorje-Gorski Kotar County, Puglia, Splitsko-dalmatinska \u017eupanija, Vojvodina and Wien on Monday, June 22nd 2026 around 22:22 UT.",
+    "reports": 8,
+    "timestamp": null
+  },
+  "4653": {
+    "summary": "We received 19 reports about a fireball seen over Bretagne, Centre-Val de Loire, Normandie, Nouvelle-Aquitaine and Pays de la Loire on Monday, June 22nd 2026 around 21:13 UT.",
+    "reports": 19,
+    "timestamp": null
+  },
   "4638": {
     "summary": "We received 6 reports about a fireball seen over Paran\u00e1 and S\u00e3o Paulo on Monday, June 22nd 2026 around 09:40 UT.",
     "reports": 6,
@@ -7,21 +22,6 @@
   "4625": {
     "summary": "We received 16 reports about a fireball seen over New South Wales and South Australia on Monday, June 22nd 2026 around 08:26 UT.",
     "reports": 16,
-    "timestamp": null
-  },
-  "4624": {
-    "summary": "We received 7 reports about a fireball seen over Otago Region and Southland Region on Monday, June 22nd 2026 around 05:49 UT.",
-    "reports": 7,
-    "timestamp": null
-  },
-  "4623": {
-    "summary": "We received 8 reports about a fireball seen over CA on Monday, June 22nd 2026 around 04:10 UT.",
-    "reports": 8,
-    "timestamp": null
-  },
-  "4622": {
-    "summary": "We received 8 reports about a fireball seen over CA on Monday, June 22nd 2026 around 03:46 UT.",
-    "reports": 8,
     "timestamp": null
   }
 }
