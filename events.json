@@ -1,7 +1,12 @@
 {
   "4729": {
-    "summary": "We received 17 reports about a fireball seen over \u00cele-de-France, England, Hauts-de-France and Vlaanderen on Thursday, June 25th 2026 around 22:16 UT.",
-    "reports": 17,
+    "summary": "We received 20 reports about a fireball seen over \u00cele-de-France, England, Hauts-de-France and Vlaanderen on Thursday, June 25th 2026 around 22:15 UT.",
+    "reports": 20,
+    "timestamp": null
+  },
+  "4765": {
+    "summary": "We received 6 reports about a fireball seen over CA on Thursday, June 25th 2026 around 04:49 UT.",
+    "reports": 6,
     "timestamp": null
   },
   "4756": {
@@ -17,11 +22,6 @@
   "4734": {
     "summary": "We received 26 reports about a fireball seen over Arag\u00f3n, Auvergne-Rh\u00f4ne-Alpes, Catalunya, Illes Balears, Liguria, Nouvelle-Aquitaine, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Thursday, June 25th 2026 around 00:29 UT.",
     "reports": 26,
-    "timestamp": null
-  },
-  "4717": {
-    "summary": "We received 19 reports about a fireball seen over England and Wales on Wednesday, June 24th 2026 around 23:03 UT.",
-    "reports": 19,
     "timestamp": null
   }
 }
