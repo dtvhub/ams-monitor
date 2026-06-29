@@ -4,6 +4,11 @@
     "reports": 10,
     "timestamp": null
   },
+  "4866": {
+    "summary": "We received 5 reports about a fireball seen over Para\u00edba, Pernambuco and Rio Grande do Norte on Sunday, June 28th 2026 around 22:32 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "4845": {
     "summary": "We received 51 reports about a fireball seen over AL, AR, FL, LA, MS and TX on Sunday, June 28th 2026 around 10:03 UT.",
     "reports": 51,
@@ -17,11 +22,6 @@
   "4829": {
     "summary": "We received 142 reports about a fireball seen over Baden-W\u00fcrttemberg, Bavaria, Bayern, Gelderland, Hamburg, Hessen, Limburg, Lower Saxony, Niedersachsen, Nordrhein-Westfalen, Overijssel, Rheinland-Pfalz, Sachsen, Sachsen-Anhalt, Salzburg and Th\u00fcringen on Saturday, June 27th 2026 around 21:37 UT.",
     "reports": 142,
-    "timestamp": null
-  },
-  "4852": {
-    "summary": "We received 5 reports about a fireball seen over Baden-W\u00fcrttemberg, Bayern, Hessen, Niedersachsen and Sachsen-Anhalt on Saturday, June 27th 2026 around 20:31 UT.",
-    "reports": 5,
     "timestamp": null
   }
 }
