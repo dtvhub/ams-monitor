@@ -1,4 +1,9 @@
 {
+  "4953": {
+    "summary": "We received 5 reports about a fireball seen over Minas Gerais on Wednesday, July 1st 2026 around 21:22 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "4942": {
     "summary": "We received 16 reports about a fireball seen over NJ, NY, PA and VA on Wednesday, July 1st 2026 around 02:37 UT.",
     "reports": 16,
@@ -17,11 +22,6 @@
   "4936": {
     "summary": "We received 10 reports about a fireball seen over Bayern, Carinthia, Ober\u00f6sterreich, Salzburg, Toscana and Veneto on Tuesday, June 30th 2026 around 20:01 UT.",
     "reports": 10,
-    "timestamp": null
-  },
-  "4933": {
-    "summary": "We received 20 reports about a fireball seen over Abruzzo, Friuli-Venezia Giulia, Istria County, Li\u010dko-senjska \u017eupanija, Ljubljana, Marche, Molise, Primorje-Gorski Kotar, Primorje-Gorski Kotar County and Veneto on Tuesday, June 30th 2026 around 19:01 UT.",
-    "reports": 20,
     "timestamp": null
   }
 }
