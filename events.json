@@ -1,4 +1,14 @@
 {
+  "4993": {
+    "summary": "We received 20 reports about a fireball seen over NC and SC on Friday, July 3rd 2026 around 01:20 UT.",
+    "reports": 20,
+    "timestamp": null
+  },
+  "4991": {
+    "summary": "We received 16 reports about a fireball seen over Central Abaco and FL on Friday, July 3rd 2026 around 01:16 UT.",
+    "reports": 16,
+    "timestamp": null
+  },
   "4979": {
     "summary": "We received 5 reports about a fireball seen over Arusha Region, Kajiado County, Kilimanjaro Region, Manyara Region and Unguja North Region on Thursday, July 2nd 2026 around 17:44 UT.",
     "reports": 5,
@@ -12,16 +22,6 @@
   "4972": {
     "summary": "We received 14 reports about a fireball seen over FL on Thursday, July 2nd 2026 around 04:26 UT.",
     "reports": 14,
-    "timestamp": null
-  },
-  "4959": {
-    "summary": "We received 6 reports about a fireball seen over OK and TX on Thursday, July 2nd 2026 around 03:17 UT.",
-    "reports": 6,
-    "timestamp": null
-  },
-  "4953": {
-    "summary": "We received 8 reports about a fireball seen over Minas Gerais and S\u00e3o Paulo on Wednesday, July 1st 2026 around 21:21 UT.",
-    "reports": 8,
     "timestamp": null
   }
 }
