@@ -1,12 +1,17 @@
 {
+  "5004": {
+    "summary": "We received 12 reports about a fireball seen over IN, MI and OH on Friday, July 3rd 2026 around 03:15 UT.",
+    "reports": 12,
+    "timestamp": null
+  },
   "4993": {
-    "summary": "We received 21 reports about a fireball seen over NC and SC on Friday, July 3rd 2026 around 01:20 UT.",
-    "reports": 21,
+    "summary": "We received 22 reports about a fireball seen over NC and SC on Friday, July 3rd 2026 around 01:20 UT.",
+    "reports": 22,
     "timestamp": null
   },
   "4991": {
-    "summary": "We received 21 reports about a fireball seen over Central Abaco and FL on Friday, July 3rd 2026 around 01:18 UT.",
-    "reports": 21,
+    "summary": "We received 24 reports about a fireball seen over Central Abaco and FL on Friday, July 3rd 2026 around 01:19 UT.",
+    "reports": 24,
     "timestamp": null
   },
   "4979": {
@@ -17,11 +22,6 @@
   "4974": {
     "summary": "We received 9 reports about a fireball seen over CA and NV on Thursday, July 2nd 2026 around 04:40 UT.",
     "reports": 9,
-    "timestamp": null
-  },
-  "4972": {
-    "summary": "We received 15 reports about a fireball seen over FL on Thursday, July 2nd 2026 around 04:26 UT.",
-    "reports": 15,
     "timestamp": null
   }
 }
