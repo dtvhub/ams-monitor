@@ -1,27 +1,27 @@
 {
-  "5052": {
-    "summary": "We received 46 reports about a fireball seen over Alberta and Saskatchewan on Saturday, July 4th 2026 around 05:28 UT.",
-    "reports": 46,
+  "5098": {
+    "summary": "We received 7 reports about a fireball seen over ID, MT and WA on Sunday, July 5th 2026 around 05:26 UT.",
+    "reports": 7,
     "timestamp": null
   },
-  "5050": {
-    "summary": "We received 11 reports about a fireball seen over Alberta on Saturday, July 4th 2026 around 05:00 UT.",
-    "reports": 11,
-    "timestamp": null
-  },
-  "5064": {
-    "summary": "We received 5 reports about a fireball seen over IL and MO on Saturday, July 4th 2026 around 02:32 UT.",
+  "5097": {
+    "summary": "We received 5 reports about a fireball seen over MI and WI on Sunday, July 5th 2026 around 03:53 UT.",
     "reports": 5,
     "timestamp": null
   },
-  "5062": {
-    "summary": "We received 5 reports about a fireball seen over MD and PA on Saturday, July 4th 2026 around 02:09 UT.",
-    "reports": 5,
+  "5057": {
+    "summary": "We received 6 reports about a fireball seen over ME, New Brunswick, Nova Scotia and Qu\u00e9bec on Sunday, July 5th 2026 around 02:55 UT.",
+    "reports": 6,
     "timestamp": null
   },
-  "5033": {
-    "summary": "We received 13 reports about a fireball seen over CT, MA and RI on Saturday, July 4th 2026 around 00:39 UT.",
-    "reports": 13,
+  "5055": {
+    "summary": "We received 18 reports about a fireball seen over NY, Ontario, Qu\u00e9bec, Quebec and VT on Sunday, July 5th 2026 around 01:32 UT.",
+    "reports": 18,
+    "timestamp": null
+  },
+  "5072": {
+    "summary": "We received 10 reports about a fireball seen over CA, OR and WA on Saturday, July 4th 2026 around 08:45 UT.",
+    "reports": 10,
     "timestamp": null
   }
 }
