@@ -1,4 +1,14 @@
 {
+  "5171": {
+    "summary": "We received 11 reports about a fireball seen over \u00cele-de-France, Bretagne, Centre-Val de Loire, Nouvelle-Aquitaine and Pays de la Loire on Tuesday, July 7th 2026 around 22:36 UT.",
+    "reports": 11,
+    "timestamp": null
+  },
+  "5166": {
+    "summary": "We received 10 reports about a fireball seen over AZ, NV and UT on Tuesday, July 7th 2026 around 10:39 UT.",
+    "reports": 10,
+    "timestamp": null
+  },
   "5161": {
     "summary": "We received 13 reports about a fireball seen over CA on Tuesday, July 7th 2026 around 07:09 UT.",
     "reports": 13,
@@ -10,18 +20,8 @@
     "timestamp": null
   },
   "5136": {
-    "summary": "We received 46 reports about a fireball seen over Aargau, \u00cele-de-France, Baden-W\u00fcrttemberg, Bayern, England, Gelderland, Grand Est, Hauts-de-France, Nordrhein-Westfalen, Normandie, North Rhine-Westphalia, Pays de la Loire, R\u00e9gion wallonne, Redange, Rheinland-Pfalz, Saarland, Vlaanderen and Zuid-Holland on Monday, July 6th 2026 around 23:14 UT.",
-    "reports": 46,
-    "timestamp": null
-  },
-  "5137": {
-    "summary": "We received 18 reports about a fireball seen over Emilia-Romagna, Liguria, Lombardia, Piemonte and Toscana on Monday, July 6th 2026 around 23:13 UT.",
-    "reports": 18,
-    "timestamp": null
-  },
-  "5134": {
-    "summary": "We received 5 reports about a fireball seen over Baden-W\u00fcrttemberg, Bourgogne-Franche-Comt\u00e9 and Piemonte on Monday, July 6th 2026 around 21:33 UT.",
-    "reports": 5,
+    "summary": "We received 47 reports about a fireball seen over Aargau, \u00cele-de-France, Baden-W\u00fcrttemberg, Bayern, England, Gelderland, Grand Est, Hauts-de-France, Nordrhein-Westfalen, Normandie, North Rhine-Westphalia, Pays de la Loire, R\u00e9gion wallonne, Redange, Rheinland-Pfalz, Saarland, Vlaanderen and Zuid-Holland on Monday, July 6th 2026 around 23:14 UT.",
+    "reports": 47,
     "timestamp": null
   }
 }
