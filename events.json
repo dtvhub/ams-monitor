@@ -1,7 +1,12 @@
 {
   "5117": {
-    "summary": "We received 7 reports about a fireball seen over CA on Monday, July 6th 2026 around 04:11 UT.",
-    "reports": 7,
+    "summary": "We received 16 reports about a fireball seen over CA on Monday, July 6th 2026 around 04:10 UT.",
+    "reports": 16,
+    "timestamp": null
+  },
+  "5116": {
+    "summary": "We received 5 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Catalunya, Illes Balears, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Monday, July 6th 2026 around 03:26 UT.",
+    "reports": 5,
     "timestamp": null
   },
   "5098": {
@@ -17,11 +22,6 @@
   "5057": {
     "summary": "We received 8 reports about a fireball seen over ME, New Brunswick, Nova Scotia and Qu\u00e9bec on Sunday, July 5th 2026 around 02:52 UT.",
     "reports": 8,
-    "timestamp": null
-  },
-  "5055": {
-    "summary": "We received 18 reports about a fireball seen over NY, Ontario, Qu\u00e9bec, Quebec and VT on Sunday, July 5th 2026 around 01:32 UT.",
-    "reports": 18,
     "timestamp": null
   }
 }
