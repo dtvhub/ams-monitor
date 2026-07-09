@@ -1,27 +1,27 @@
 {
+  "5251": {
+    "summary": "We received 31 reports about a fireball seen over FL, GA and LA on Thursday, July 9th 2026 around 10:40 UT.",
+    "reports": 31,
+    "timestamp": null
+  },
+  "5248": {
+    "summary": "We received 39 reports about a fireball seen over FL, GA, LA, NC, SC and TN on Thursday, July 9th 2026 around 09:31 UT.",
+    "reports": 39,
+    "timestamp": null
+  },
   "5242": {
     "summary": "We received 10 reports about a fireball seen over Alberta and Saskatchewan on Thursday, July 9th 2026 around 04:39 UT.",
     "reports": 10,
     "timestamp": null
   },
-  "5223": {
-    "summary": "We received 5 reports about a fireball seen over England, Utrecht and Zuid-Holland on Wednesday, July 8th 2026 around 21:45 UT.",
+  "5234": {
+    "summary": "We received 5 reports about a fireball seen over Alberta and MT on Thursday, July 9th 2026 around 04:38 UT.",
     "reports": 5,
     "timestamp": null
   },
-  "5215": {
-    "summary": "We received 14 reports about a fireball seen over CA and NV on Wednesday, July 8th 2026 around 09:53 UT.",
-    "reports": 14,
-    "timestamp": null
-  },
-  "5212": {
-    "summary": "We received 6 reports about a fireball seen over CA on Wednesday, July 8th 2026 around 08:31 UT.",
-    "reports": 6,
-    "timestamp": null
-  },
-  "5183": {
-    "summary": "We received 15 reports about a fireball seen over ME, New Brunswick, Nouveau-Brunswick, Nova Scotia, Prince Edward Island, Qu\u00e9bec and Quebec on Wednesday, July 8th 2026 around 02:47 UT.",
-    "reports": 15,
+  "5223": {
+    "summary": "We received 5 reports about a fireball seen over England, Utrecht and Zuid-Holland on Wednesday, July 8th 2026 around 21:45 UT.",
+    "reports": 5,
     "timestamp": null
   }
 }
