@@ -1,4 +1,9 @@
 {
+  "5242": {
+    "summary": "We received 10 reports about a fireball seen over Alberta and Saskatchewan on Thursday, July 9th 2026 around 04:39 UT.",
+    "reports": 10,
+    "timestamp": null
+  },
   "5223": {
     "summary": "We received 5 reports about a fireball seen over England, Utrecht and Zuid-Holland on Wednesday, July 8th 2026 around 21:45 UT.",
     "reports": 5,
@@ -17,11 +22,6 @@
   "5183": {
     "summary": "We received 15 reports about a fireball seen over ME, New Brunswick, Nouveau-Brunswick, Nova Scotia, Prince Edward Island, Qu\u00e9bec and Quebec on Wednesday, July 8th 2026 around 02:47 UT.",
     "reports": 15,
-    "timestamp": null
-  },
-  "5171": {
-    "summary": "We received 29 reports about a fireball seen over \u00cele-de-France, Bretagne, Centre-Val de Loire, England, Normandie, Nouvelle-Aquitaine, Pays de la Loire and St Clement on Tuesday, July 7th 2026 around 22:36 UT.",
-    "reports": 29,
     "timestamp": null
   }
 }
