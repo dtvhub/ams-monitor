@@ -1,27 +1,27 @@
 {
+  "5321": {
+    "summary": "We received 12 reports about a fireball seen over Berlin, Grand Est, Hessen, Niedersachsen, North Rhine-Westphalia, R\u00e9gion wallonne and Rheinland-Pfalz on Friday, July 10th 2026 around 21:53 UT.",
+    "reports": 12,
+    "timestamp": null
+  },
   "5310": {
     "summary": "We received 13 reports about a fireball seen over CO and WY on Friday, July 10th 2026 around 08:02 UT.",
     "reports": 13,
     "timestamp": null
   },
   "5253": {
-    "summary": "We received 16 reports about a fireball seen over \u00cele-de-France, Bretagne, Centre-Val de Loire, Normandie, Nouvelle-Aquitaine and Pays de la Loire on Thursday, July 9th 2026 around 22:51 UT.",
-    "reports": 16,
+    "summary": "We received 17 reports about a fireball seen over \u00cele-de-France, Bretagne, Centre-Val de Loire, Normandie, Nouvelle-Aquitaine and Pays de la Loire on Thursday, July 9th 2026 around 22:49 UT.",
+    "reports": 17,
+    "timestamp": null
+  },
+  "5257": {
+    "summary": "We received 5 reports about a fireball seen over Baden-W\u00fcrttemberg and Bayern on Thursday, July 9th 2026 around 22:30 UT.",
+    "reports": 5,
     "timestamp": null
   },
   "5265": {
     "summary": "We received 7 reports about a fireball seen over Baden-W\u00fcrttemberg, Bayern, Burgenland, Grad Zagreb, Novo mesto and Steiermark on Thursday, July 9th 2026 around 20:31 UT.",
     "reports": 7,
-    "timestamp": null
-  },
-  "5251": {
-    "summary": "We received 40 reports about a fireball seen over FL, GA and LA on Thursday, July 9th 2026 around 10:40 UT.",
-    "reports": 40,
-    "timestamp": null
-  },
-  "5248": {
-    "summary": "We received 40 reports about a fireball seen over FL, GA, LA, NC, SC and TN on Thursday, July 9th 2026 around 09:31 UT.",
-    "reports": 40,
     "timestamp": null
   }
 }
