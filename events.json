@@ -1,7 +1,12 @@
 {
-  "5401": {
-    "summary": "We received 5 reports about a fireball seen over ID, MT and WA on Monday, July 13th 2026 around 05:11 UT.",
+  "5409": {
+    "summary": "We received 5 reports about a fireball seen over Paran\u00e1 and Santa Catarina on Monday, July 13th 2026 around 09:44 UT.",
     "reports": 5,
+    "timestamp": null
+  },
+  "5401": {
+    "summary": "We received 12 reports about a fireball seen over ID, MT and WA on Monday, July 13th 2026 around 05:08 UT.",
+    "reports": 12,
     "timestamp": null
   },
   "5382": {
@@ -17,11 +22,6 @@
   "5366": {
     "summary": "We received 10 reports about a fireball seen over AL, FL, GA, LA and MS on Sunday, July 12th 2026 around 02:07 UT.",
     "reports": 10,
-    "timestamp": null
-  },
-  "5353": {
-    "summary": "We received 27 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Baden-W\u00fcrttemberg, Bayern, Bern, Bourgogne-Franche-Comt\u00e9, Lombardia, Luzern, Occitanie, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Valais, Valle d'Aosta, Vaud, Vorarlberg, Z\u00fcrich and Zug on Saturday, July 11th 2026 around 21:09 UT.",
-    "reports": 27,
     "timestamp": null
   }
 }
