@@ -1,27 +1,27 @@
 {
+  "5401": {
+    "summary": "We received 5 reports about a fireball seen over ID, MT and WA on Monday, July 13th 2026 around 05:11 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
+  "5382": {
+    "summary": "We received 6 reports about a fireball seen over IA, MN and WI on Sunday, July 12th 2026 around 10:03 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
+  "5373": {
+    "summary": "We received 6 reports about a fireball seen over AZ and UT on Sunday, July 12th 2026 around 05:24 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
+  "5366": {
+    "summary": "We received 10 reports about a fireball seen over AL, FL, GA, LA and MS on Sunday, July 12th 2026 around 02:07 UT.",
+    "reports": 10,
+    "timestamp": null
+  },
   "5353": {
     "summary": "We received 27 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Baden-W\u00fcrttemberg, Bayern, Bern, Bourgogne-Franche-Comt\u00e9, Lombardia, Luzern, Occitanie, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Valais, Valle d'Aosta, Vaud, Vorarlberg, Z\u00fcrich and Zug on Saturday, July 11th 2026 around 21:09 UT.",
     "reports": 27,
-    "timestamp": null
-  },
-  "5342": {
-    "summary": "We received 20 reports about a fireball seen over CA, ID, UT and WY on Saturday, July 11th 2026 around 04:44 UT.",
-    "reports": 20,
-    "timestamp": null
-  },
-  "5334": {
-    "summary": "We received 42 reports about a fireball seen over Apulia, Calabria, Campania, Molise, Puglia, Sicilia, Split-Dalmatia County and Tivat Municipality on Friday, July 10th 2026 around 23:59 UT.",
-    "reports": 42,
-    "timestamp": null
-  },
-  "5321": {
-    "summary": "We received 12 reports about a fireball seen over Berlin, Grand Est, Hessen, Niedersachsen, North Rhine-Westphalia, R\u00e9gion wallonne and Rheinland-Pfalz on Friday, July 10th 2026 around 21:53 UT.",
-    "reports": 12,
-    "timestamp": null
-  },
-  "5310": {
-    "summary": "We received 13 reports about a fireball seen over CO and WY on Friday, July 10th 2026 around 08:02 UT.",
-    "reports": 13,
     "timestamp": null
   }
 }
