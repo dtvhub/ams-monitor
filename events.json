@@ -1,4 +1,9 @@
 {
+  "5455": {
+    "summary": "We received 12 reports about a fireball seen over Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Grand Est, Jura, Rheinland-Pfalz, Saarland and Z\u00fcrich on Wednesday, July 15th 2026 around 02:37 UT.",
+    "reports": 12,
+    "timestamp": null
+  },
   "5440": {
     "summary": "We received 7 reports about a fireball seen over MD and VA on Tuesday, July 14th 2026 around 09:19 UT.",
     "reports": 7,
@@ -10,18 +15,13 @@
     "timestamp": null
   },
   "5423": {
-    "summary": "We received 6 reports about a fireball seen over Berlin and Sachsen on Monday, July 13th 2026 around 22:15 UT.",
-    "reports": 6,
+    "summary": "We received 7 reports about a fireball seen over Berlin and Sachsen on Monday, July 13th 2026 around 22:15 UT.",
+    "reports": 7,
     "timestamp": null
   },
   "5409": {
     "summary": "We received 6 reports about a fireball seen over Paran\u00e1 and Santa Catarina on Monday, July 13th 2026 around 09:44 UT.",
     "reports": 6,
-    "timestamp": null
-  },
-  "5401": {
-    "summary": "We received 13 reports about a fireball seen over ID, MT and WA on Monday, July 13th 2026 around 05:08 UT.",
-    "reports": 13,
     "timestamp": null
   }
 }
