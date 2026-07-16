@@ -1,12 +1,17 @@
 {
+  "5513": {
+    "summary": "We received 16 reports about a fireball seen over Himachal Pradesh and Punjab on Thursday, July 16th 2026 around 15:05 UT.",
+    "reports": 16,
+    "timestamp": null
+  },
   "5488": {
-    "summary": "We received 52 reports about a fireball seen over IA, IL, KS, MO and NE on Thursday, July 16th 2026 around 03:18 UT.",
-    "reports": 52,
+    "summary": "We received 56 reports about a fireball seen over AR, IA, IL, KS, Missouri, MO and NE on Thursday, July 16th 2026 around 03:18 UT.",
+    "reports": 56,
     "timestamp": null
   },
   "5455": {
-    "summary": "We received 14 reports about a fireball seen over Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Grand Est, Hessen, Jura, Rheinland-Pfalz, Saarland and Z\u00fcrich on Wednesday, July 15th 2026 around 02:37 UT.",
-    "reports": 14,
+    "summary": "We received 15 reports about a fireball seen over Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Grand Est, Hessen, Jura, Rheinland-Pfalz, Saarland and Z\u00fcrich on Wednesday, July 15th 2026 around 02:37 UT.",
+    "reports": 15,
     "timestamp": null
   },
   "5453": {
@@ -17,11 +22,6 @@
   "5440": {
     "summary": "We received 7 reports about a fireball seen over MD and VA on Tuesday, July 14th 2026 around 09:19 UT.",
     "reports": 7,
-    "timestamp": null
-  },
-  "5430": {
-    "summary": "We received 53 reports about a fireball seen over CT, MA, NH, NJ, NY, Ontario, PA, Qu\u00e9bec and VT on Tuesday, July 14th 2026 around 03:20 UT.",
-    "reports": 53,
     "timestamp": null
   }
 }
