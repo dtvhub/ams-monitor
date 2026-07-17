@@ -1,7 +1,12 @@
 {
   "5534": {
-    "summary": "We received 10 reports about a fireball seen over CT, MA, NY and RI on Friday, July 17th 2026 around 06:34 UT.",
-    "reports": 10,
+    "summary": "We received 12 reports about a fireball seen over CT, MA, NY, PA and RI on Friday, July 17th 2026 around 06:35 UT.",
+    "reports": 12,
+    "timestamp": null
+  },
+  "5542": {
+    "summary": "We received 8 reports about a fireball seen over CA on Friday, July 17th 2026 around 04:30 UT.",
+    "reports": 8,
     "timestamp": null
   },
   "5513": {
@@ -10,18 +15,13 @@
     "timestamp": null
   },
   "5488": {
-    "summary": "We received 56 reports about a fireball seen over AR, IA, IL, KS, MO and NE on Thursday, July 16th 2026 around 03:18 UT.",
-    "reports": 56,
+    "summary": "We received 58 reports about a fireball seen over AR, IA, IL, KS, MO and NE on Thursday, July 16th 2026 around 03:17 UT.",
+    "reports": 58,
     "timestamp": null
   },
   "5455": {
     "summary": "We received 15 reports about a fireball seen over Baden-W\u00fcrttemberg, Bern, Bourgogne-Franche-Comt\u00e9, Grand Est, Hessen, Jura, Rheinland-Pfalz, Saarland and Z\u00fcrich on Wednesday, July 15th 2026 around 02:37 UT.",
     "reports": 15,
-    "timestamp": null
-  },
-  "5453": {
-    "summary": "We received 8 reports about a fireball seen over NJ and PA on Wednesday, July 15th 2026 around 01:59 UT.",
-    "reports": 8,
     "timestamp": null
   }
 }
