@@ -1,4 +1,9 @@
 {
+  "5560": {
+    "summary": "We received 10 reports about a fireball seen over England and Wales on Friday, July 17th 2026 around 22:38 UT.",
+    "reports": 10,
+    "timestamp": null
+  },
   "5557": {
     "summary": "We received 40 reports about a fireball seen over Bretagne, Centre-Val de Loire, Normandie, Nouvelle-Aquitaine and Pays de la Loire on Friday, July 17th 2026 around 21:37 UT.",
     "reports": 40,
@@ -17,11 +22,6 @@
   "5534": {
     "summary": "We received 13 reports about a fireball seen over CT, MA, NY, PA and RI on Friday, July 17th 2026 around 06:35 UT.",
     "reports": 13,
-    "timestamp": null
-  },
-  "5542": {
-    "summary": "We received 8 reports about a fireball seen over CA on Friday, July 17th 2026 around 04:30 UT.",
-    "reports": 8,
     "timestamp": null
   }
 }
