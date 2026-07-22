@@ -1,27 +1,27 @@
 {
-  "5647": {
-    "summary": "We received 5 reports about a fireball seen over NY, OH and PA on Tuesday, July 21st 2026 around 08:19 UT.",
+  "5685": {
+    "summary": "We received 22 reports about a fireball seen over England and Wales on Tuesday, July 21st 2026 around 21:49 UT.",
+    "reports": 22,
+    "timestamp": null
+  },
+  "5684": {
+    "summary": "We received 5 reports about a fireball seen over Bretagne, Cantabria and Nouvelle-Aquitaine on Tuesday, July 21st 2026 around 21:46 UT.",
     "reports": 5,
     "timestamp": null
   },
+  "5681": {
+    "summary": "We received 8 reports about a fireball seen over Baden-W\u00fcrttemberg, Bayern, Grand Est, Hessen and Rheinland-Pfalz on Tuesday, July 21st 2026 around 21:28 UT.",
+    "reports": 8,
+    "timestamp": null
+  },
+  "5647": {
+    "summary": "We received 6 reports about a fireball seen over IN, NY, OH and PA on Tuesday, July 21st 2026 around 08:19 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "5642": {
-    "summary": "We received 17 reports about a fireball seen over IA, MN and WI on Tuesday, July 21st 2026 around 04:06 UT.",
-    "reports": 17,
-    "timestamp": null
-  },
-  "5646": {
-    "summary": "We received 6 reports about a fireball seen over CO and NM on Tuesday, July 21st 2026 around 02:56 UT.",
-    "reports": 6,
-    "timestamp": null
-  },
-  "5635": {
-    "summary": "We received 6 reports about a fireball seen over Gelderland, Grand Est, Nordrhein-Westfalen and North Rhine-Westphalia on Monday, July 20th 2026 around 22:40 UT.",
-    "reports": 6,
-    "timestamp": null
-  },
-  "5606": {
-    "summary": "We received 6 reports about a fireball seen over New South Wales and Victoria on Sunday, July 19th 2026 around 20:56 UT.",
-    "reports": 6,
+    "summary": "We received 24 reports about a fireball seen over IA, MN and WI on Tuesday, July 21st 2026 around 04:05 UT.",
+    "reports": 24,
     "timestamp": null
   }
 }
