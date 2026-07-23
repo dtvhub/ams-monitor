@@ -1,4 +1,9 @@
 {
+  "5710": {
+    "summary": "We received 5 reports about a fireball seen over WA on Wednesday, July 22nd 2026 around 07:59 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "5685": {
     "summary": "We received 29 reports about a fireball seen over England and Wales on Tuesday, July 21st 2026 around 21:48 UT.",
     "reports": 29,
@@ -17,11 +22,6 @@
   "5647": {
     "summary": "We received 6 reports about a fireball seen over IN, NY, OH and PA on Tuesday, July 21st 2026 around 08:19 UT.",
     "reports": 6,
-    "timestamp": null
-  },
-  "5642": {
-    "summary": "We received 24 reports about a fireball seen over IA, MN and WI on Tuesday, July 21st 2026 around 04:05 UT.",
-    "reports": 24,
     "timestamp": null
   }
 }
