@@ -1,7 +1,12 @@
 {
+  "5914": {
+    "summary": "We received 27 reports about a fireball seen over Auckland, Bay of Plenty Region, Canterbury Region, Hawke's Bay Region, Manawat\u016b-Whanganui Region, Marlborough Region, Taranaki Region, Tasman Region and Wellington Region on Tuesday, July 28th 2026 around 10:27 UT.",
+    "reports": 27,
+    "timestamp": null
+  },
   "5898": {
-    "summary": "We received 65 reports about a fireball seen over Emilia-Romagna, Liguria, Lombardia, Marche, Occitanie, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Sardegna, Toscana, Trentino-Alto Adige, Umbria and Veneto on Monday, July 27th 2026 around 21:07 UT.",
-    "reports": 65,
+    "summary": "We received 71 reports about a fireball seen over Emilia-Romagna, Liguria, Lombardia, Marche, Occitanie, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Sardegna, Toscana, Trentino-Alto Adige, Umbria and Veneto on Monday, July 27th 2026 around 21:08 UT.",
+    "reports": 71,
     "timestamp": null
   },
   "5897": {
@@ -10,18 +15,13 @@
     "timestamp": null
   },
   "5895": {
-    "summary": "We received 5 reports about a fireball seen over Famagusta, Larnaka, Lefkosia, Nicosia and Paphos on Monday, July 27th 2026 around 18:29 UT.",
-    "reports": 5,
+    "summary": "We received 6 reports about a fireball seen over Famagusta, Larnaka, Lefkosia, Limassol, Nicosia and Paphos on Monday, July 27th 2026 around 18:29 UT.",
+    "reports": 6,
     "timestamp": null
   },
   "5835": {
     "summary": "We received 6 reports about a fireball seen over \u00cele-de-France, Bourgogne-Franche-Comt\u00e9, Centre-Val de Loire and Nouvelle-Aquitaine on Sunday, July 26th 2026 around 22:14 UT.",
     "reports": 6,
-    "timestamp": null
-  },
-  "5801": {
-    "summary": "We received 133 reports about a fireball seen over Bavaria, Bayern, Emilia-Romagna, Friuli-Venezia Giulia, Grad Zagreb, Hlavn\u00ed m\u011bsto Praha, Istria County, K\u00e4rnten, Lazio, Liguria, Ljubljana, Lombardia, Marche, Piemonte, Salzburg, Toscana, Trentino-Alto Adige and Veneto on Sunday, July 26th 2026 around 19:23 UT.",
-    "reports": 133,
     "timestamp": null
   }
 }
