@@ -4,9 +4,14 @@
     "reports": 27,
     "timestamp": null
   },
+  "5910": {
+    "summary": "We received 8 reports about a fireball seen over CA on Tuesday, July 28th 2026 around 04:53 UT.",
+    "reports": 8,
+    "timestamp": null
+  },
   "5898": {
-    "summary": "We received 72 reports about a fireball seen over Emilia-Romagna, Liguria, Lombardia, Marche, Occitanie, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Sardegna, Toscana, Trentino-Alto Adige, Umbria and Veneto on Monday, July 27th 2026 around 21:08 UT.",
-    "reports": 72,
+    "summary": "We received 79 reports about a fireball seen over Emilia-Romagna, Liguria, Lombardia, Lombardy, Marche, Occitanie, Piemonte, Provence-Alpes-C\u00f4te d'Azur, Sardegna, Toscana, Trentino-Alto Adige, Umbria and Veneto on Monday, July 27th 2026 around 21:07 UT.",
+    "reports": 79,
     "timestamp": null
   },
   "5897": {
@@ -15,13 +20,8 @@
     "timestamp": null
   },
   "5895": {
-    "summary": "We received 6 reports about a fireball seen over Famagusta, Larnaka, Lefkosia, Limassol, Nicosia and Paphos on Monday, July 27th 2026 around 18:29 UT.",
-    "reports": 6,
-    "timestamp": null
-  },
-  "5835": {
-    "summary": "We received 6 reports about a fireball seen over \u00cele-de-France, Bourgogne-Franche-Comt\u00e9, Centre-Val de Loire and Nouvelle-Aquitaine on Sunday, July 26th 2026 around 22:14 UT.",
-    "reports": 6,
+    "summary": "We received 9 reports about a fireball seen over Ammochostos, Famagusta, Larnaka, Lefkosia, Limassol, Nicosia and Paphos on Monday, July 27th 2026 around 18:29 UT.",
+    "reports": 9,
     "timestamp": null
   }
 }
