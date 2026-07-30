@@ -1,4 +1,9 @@
 {
+  "6000": {
+    "summary": "We received 9 reports about a fireball seen over Auckland and Northland Region on Thursday, July 30th 2026 around 07:46 UT.",
+    "reports": 9,
+    "timestamp": null
+  },
   "5977": {
     "summary": "We received 6 reports about a fireball seen over LA and TX on Wednesday, July 29th 2026 around 10:58 UT.",
     "reports": 6,
@@ -15,13 +20,8 @@
     "timestamp": null
   },
   "5933": {
-    "summary": "We received 5 reports about a fireball seen over Punjab on Tuesday, July 28th 2026 around 15:36 UT.",
-    "reports": 5,
-    "timestamp": null
-  },
-  "5914": {
-    "summary": "We received 37 reports about a fireball seen over Auckland, Bay of Plenty Region, Canterbury Region, Hawke's Bay Region, Manawat\u016b-Whanganui Region, Marlborough Region, Taranaki Region, Tasman Region and Wellington Region on Tuesday, July 28th 2026 around 10:27 UT.",
-    "reports": 37,
+    "summary": "We received 6 reports about a fireball seen over Punjab on Tuesday, July 28th 2026 around 15:45 UT.",
+    "reports": 6,
     "timestamp": null
   }
 }
