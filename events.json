@@ -1,7 +1,7 @@
 {
   "6050": {
-    "summary": "We received 9 reports about a fireball seen over CA, NV and OR on Friday, July 31st 2026 around 04:21 UT.",
-    "reports": 9,
+    "summary": "We received 16 reports about a fireball seen over CA, NV and OR on Friday, July 31st 2026 around 04:22 UT.",
+    "reports": 16,
     "timestamp": null
   },
   "6047": {
@@ -10,18 +10,18 @@
     "timestamp": null
   },
   "6033": {
-    "summary": "We received 9 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Bourgogne-Franche-Comt\u00e9, Canton of Bern, Grand Est, Luzern, Piemonte and Z\u00fcrich on Thursday, July 30th 2026 around 22:12 UT.",
-    "reports": 9,
-    "timestamp": null
-  },
-  "6027": {
-    "summary": "We received 42 reports about a fireball seen over County Wexford, England, Normandie, Scotland and Wales on Thursday, July 30th 2026 around 21:47 UT.",
-    "reports": 42,
+    "summary": "We received 10 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Bourgogne-Franche-Comt\u00e9, Canton of Bern, Grand Est, Luzern, Piemonte and Z\u00fcrich on Thursday, July 30th 2026 around 22:12 UT.",
+    "reports": 10,
     "timestamp": null
   },
   "6031": {
-    "summary": "We received 6 reports about a fireball seen over Cahul District, D\u00e2mbovi\u021ba, Jude\u021bul D\u00e2mbovi\u021ba, Virovitica-Podravina County and \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0430 \u043e\u0431\u043b on Thursday, July 30th 2026 around 21:46 UT.",
-    "reports": 6,
+    "summary": "We received 7 reports about a fireball seen over Cahul District, D\u00e2mbovi\u021ba, Jude\u021bul D\u00e2mbovi\u021ba, Virovitica-Podravina County and \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0430 \u043e\u0431\u043b on Thursday, July 30th 2026 around 21:47 UT.",
+    "reports": 7,
+    "timestamp": null
+  },
+  "6027": {
+    "summary": "We received 46 reports about a fireball seen over County Wexford, England, Normandie, Scotland and Wales on Thursday, July 30th 2026 around 21:47 UT.",
+    "reports": 46,
     "timestamp": null
   }
 }
