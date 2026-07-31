@@ -1,12 +1,12 @@
 {
   "6050": {
-    "summary": "We received 16 reports about a fireball seen over CA, NV and OR on Friday, July 31st 2026 around 04:22 UT.",
-    "reports": 16,
+    "summary": "We received 19 reports about a fireball seen over CA, NV and OR on Friday, July 31st 2026 around 04:24 UT.",
+    "reports": 19,
     "timestamp": null
   },
   "6047": {
-    "summary": "We received 16 reports about a fireball seen over CT, MA, NJ, NY and RI on Friday, July 31st 2026 around 03:43 UT.",
-    "reports": 16,
+    "summary": "We received 19 reports about a fireball seen over CT, MA, NJ, NY, PA and RI on Friday, July 31st 2026 around 03:44 UT.",
+    "reports": 19,
     "timestamp": null
   },
   "6033": {
@@ -14,14 +14,14 @@
     "reports": 10,
     "timestamp": null
   },
+  "6027": {
+    "summary": "We received 50 reports about a fireball seen over County Wexford, England, Normandie, Scotland and Wales on Thursday, July 30th 2026 around 21:47 UT.",
+    "reports": 50,
+    "timestamp": null
+  },
   "6031": {
     "summary": "We received 7 reports about a fireball seen over Cahul District, D\u00e2mbovi\u021ba, Jude\u021bul D\u00e2mbovi\u021ba, Virovitica-Podravina County and \u0406\u0432\u0430\u043d\u043e-\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0430 \u043e\u0431\u043b on Thursday, July 30th 2026 around 21:47 UT.",
     "reports": 7,
-    "timestamp": null
-  },
-  "6027": {
-    "summary": "We received 46 reports about a fireball seen over County Wexford, England, Normandie, Scotland and Wales on Thursday, July 30th 2026 around 21:47 UT.",
-    "reports": 46,
     "timestamp": null
   }
 }
