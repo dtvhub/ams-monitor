@@ -1,7 +1,12 @@
 {
+  "6140": {
+    "summary": "We received 29 reports about a fireball seen over Baden-W\u00fcrttemberg, Bayern, Brandenburg, Graub\u00fcnden, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Sachsen, Sachsen-Anhalt and Th\u00fcringen on Monday, August 3rd 2026 around 21:25 UT.",
+    "reports": 29,
+    "timestamp": null
+  },
   "6141": {
-    "summary": "We received 408 reports about a fireball seen over Abruzzo, Andaluc\u00eda, Auvergne-Rh\u00f4ne-Alpes, Campania, Corse, Corsica, Emilia-Romagna, Friuli-Venezia Giulia, Grisons, Lazio, Liguria, Lombardia, Marche, Molise, Occitanie, Pi\u00ebmont, Piedmont, Piemonte, Primorje-Gorski Kotar County, Provence-Alpes-C\u00f4te d'Azur, Puglia and Sardeg on Monday, August 3rd 2026 around 20:58 UT.",
-    "reports": 408,
+    "summary": "We received 418 reports about a fireball seen over Abruzzo, Auvergne-Rh\u00f4ne-Alpes, Campania, Corse, Corsica, Emilia-Romagna, Friuli-Venezia Giulia, Grisons, Lazio, Liguria, Lombardia, Marche, Molise, Occitanie, Pi\u00ebmont, Piedmont, Piemonte, Primorje-Gorski Kotar County, Provence-Alpes-C\u00f4te d'Azur, Puglia, Sardegna and Sardinia on Monday, August 3rd 2026 around 20:59 UT.",
+    "reports": 418,
     "timestamp": null
   },
   "6110": {
@@ -16,11 +21,6 @@
   },
   "6070": {
     "summary": "We received 5 reports about a fireball seen over Flevoland, Friesland, Noord-Holland and North Holland on Friday, July 31st 2026 around 20:30 UT.",
-    "reports": 5,
-    "timestamp": null
-  },
-  "6066": {
-    "summary": "We received 5 reports about a fireball seen over British Columbia, OR and WA on Friday, July 31st 2026 around 10:15 UT.",
     "reports": 5,
     "timestamp": null
   }
