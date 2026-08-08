@@ -4,6 +4,11 @@
     "reports": 19,
     "timestamp": null
   },
+  "6314": {
+    "summary": "We received 6 reports about a fireball seen over IN and MI on Wednesday, August 5th 2026 around 04:38 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "6296": {
     "summary": "We received 21 reports about a fireball seen over Aargau, Appenzell Innerrhoden, Baden-W\u00fcrttemberg, Bayern, Lombardia, Luzern, Piemonte, Ticino, Trentino-Alto Adige, Veneto and Z\u00fcrich on Tuesday, August 4th 2026 around 22:04 UT.",
     "reports": 21,
@@ -17,11 +22,6 @@
   "6293": {
     "summary": "We received 60 reports about a fireball seen over Berlin, Blekinge l\u00e4n, Mecklenburg-Vorpommern, Niedersachsen, Schleswig-Holstein, Sk\u00e5ne County, Sk\u00e5ne l\u00e4n and Zuid-Holland on Tuesday, August 4th 2026 around 21:38 UT.",
     "reports": 60,
-    "timestamp": null
-  },
-  "6284": {
-    "summary": "We received 23 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Baden-W\u00fcrttemberg, Catalunya, Corse, Liguria, Lombardia, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Tuesday, August 4th 2026 around 21:03 UT.",
-    "reports": 23,
     "timestamp": null
   }
 }
