@@ -1,4 +1,19 @@
 {
+  "6354": {
+    "summary": "We received 6 reports about a fireball seen over TX on Thursday, August 6th 2026 around 04:08 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
+  "6349": {
+    "summary": "We received 13 reports about a fireball seen over AR, MO, OK and TX on Thursday, August 6th 2026 around 03:18 UT.",
+    "reports": 13,
+    "timestamp": null
+  },
+  "6351": {
+    "summary": "We received 5 reports about a fireball seen over Catalunya and Occitanie on Thursday, August 6th 2026 around 02:55 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "6331": {
     "summary": "We received 10 reports about a fireball seen over England, Gelderland, Hauts-de-France, Noord-Brabant, Noord-Holland, R\u00e9gion wallonne and Vlaanderen on Wednesday, August 5th 2026 around 21:15 UT.",
     "reports": 10,
@@ -7,21 +22,6 @@
   "6330": {
     "summary": "We received 5 reports about a fireball seen over \u00cele-de-France, Korsika, Piran, R\u00e9gion wallonne and Toscana on Wednesday, August 5th 2026 around 20:22 UT.",
     "reports": 5,
-    "timestamp": null
-  },
-  "6319": {
-    "summary": "We received 6 reports about a fireball seen over CO on Wednesday, August 5th 2026 around 05:15 UT.",
-    "reports": 6,
-    "timestamp": null
-  },
-  "6315": {
-    "summary": "We received 19 reports about a fireball seen over CA on Wednesday, August 5th 2026 around 04:48 UT.",
-    "reports": 19,
-    "timestamp": null
-  },
-  "6314": {
-    "summary": "We received 6 reports about a fireball seen over IN and MI on Wednesday, August 5th 2026 around 04:38 UT.",
-    "reports": 6,
     "timestamp": null
   }
 }
