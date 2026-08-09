@@ -1,4 +1,14 @@
 {
+  "6318": {
+    "summary": "We received 5 reports about a fireball seen over British Columbia and WA on Saturday, August 8th 2026 around 06:03 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
+  "6473": {
+    "summary": "We received 5 reports about a fireball seen over KS and MO on Saturday, August 8th 2026 around 05:48 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "6436": {
     "summary": "We received 5 reports about a fireball seen over Baden-W\u00fcrttemberg, Bayern, Hessen and Nordrhein-Westfalen on Saturday, August 8th 2026 around 00:33 UT.",
     "reports": 5,
@@ -12,16 +22,6 @@
   "6432": {
     "summary": "We received 5 reports about a fireball seen over Bayern, Berlin, Brandenburg, Sachsen and Th\u00fcringen on Friday, August 7th 2026 around 23:28 UT.",
     "reports": 5,
-    "timestamp": null
-  },
-  "6431": {
-    "summary": "We received 5 reports about a fireball seen over England on Friday, August 7th 2026 around 23:20 UT.",
-    "reports": 5,
-    "timestamp": null
-  },
-  "6416": {
-    "summary": "We received 6 reports about a fireball seen over England, Gelderland, Noord-Brabant, Normandie and Vlaanderen on Friday, August 7th 2026 around 20:51 UT.",
-    "reports": 6,
     "timestamp": null
   }
 }
