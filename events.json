@@ -1,12 +1,17 @@
 {
   "6318": {
-    "summary": "We received 5 reports about a fireball seen over British Columbia and WA on Saturday, August 8th 2026 around 06:03 UT.",
-    "reports": 5,
+    "summary": "We received 6 reports about a fireball seen over British Columbia and WA on Saturday, August 8th 2026 around 06:07 UT.",
+    "reports": 6,
     "timestamp": null
   },
   "6473": {
-    "summary": "We received 6 reports about a fireball seen over KS and MO on Saturday, August 8th 2026 around 05:49 UT.",
-    "reports": 6,
+    "summary": "We received 11 reports about a fireball seen over IL, KS and MO on Saturday, August 8th 2026 around 05:54 UT.",
+    "reports": 11,
+    "timestamp": null
+  },
+  "6446": {
+    "summary": "We received 5 reports about a fireball seen over TX on Saturday, August 8th 2026 around 03:01 UT.",
+    "reports": 5,
     "timestamp": null
   },
   "6436": {
@@ -15,13 +20,8 @@
     "timestamp": null
   },
   "6435": {
-    "summary": "We received 5 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Centre-Val de Loire, Nouvelle-Aquitaine and Occitanie on Saturday, August 8th 2026 around 00:05 UT.",
-    "reports": 5,
-    "timestamp": null
-  },
-  "6432": {
-    "summary": "We received 5 reports about a fireball seen over Bayern, Berlin, Brandenburg, Sachsen and Th\u00fcringen on Friday, August 7th 2026 around 23:28 UT.",
-    "reports": 5,
+    "summary": "We received 7 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Bourgogne-Franche-Comt\u00e9, Centre-Val de Loire, Nouvelle-Aquitaine and Occitanie on Saturday, August 8th 2026 around 00:03 UT.",
+    "reports": 7,
     "timestamp": null
   }
 }
