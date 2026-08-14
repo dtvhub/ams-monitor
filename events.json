@@ -1,7 +1,12 @@
 {
   "6582": {
-    "summary": "We received 69 reports about a fireball seen over British Columbia, ID, OR and WA on Friday, August 14th 2026 around 07:49 UT.",
-    "reports": 69,
+    "summary": "We received 244 reports about a fireball seen over British Columbia, FL, ID, NY, OR and WA on Friday, August 14th 2026 around 07:48 UT.",
+    "reports": 244,
+    "timestamp": null
+  },
+  "6583": {
+    "summary": "We received reports about a fireball seen over on UT.",
+    "reports": 0,
     "timestamp": null
   },
   "6537": {
@@ -17,11 +22,6 @@
   "6575": {
     "summary": "We received 11 reports about a fireball seen over Manawat\u016b-Whanganui Region, Nelson Region and Wellington Region on Sunday, August 9th 2026 around 06:14 UT.",
     "reports": 11,
-    "timestamp": null
-  },
-  "6569": {
-    "summary": "We received 6 reports about a fireball seen over CO and NE on Sunday, August 9th 2026 around 04:24 UT.",
-    "reports": 6,
     "timestamp": null
   }
 }
