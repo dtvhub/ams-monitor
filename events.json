@@ -1,4 +1,9 @@
 {
+  "6582": {
+    "summary": "We received 69 reports about a fireball seen over British Columbia, ID, OR and WA on Friday, August 14th 2026 around 07:49 UT.",
+    "reports": 69,
+    "timestamp": null
+  },
   "6537": {
     "summary": "We received 5 reports about a fireball seen over Berlin, Hamburg and Sachsen-Anhalt on Thursday, August 13th 2026 around 01:46 UT.",
     "reports": 5,
@@ -17,11 +22,6 @@
   "6569": {
     "summary": "We received 6 reports about a fireball seen over CO and NE on Sunday, August 9th 2026 around 04:24 UT.",
     "reports": 6,
-    "timestamp": null
-  },
-  "6568": {
-    "summary": "We received 27 reports about a fireball seen over CA on Sunday, August 9th 2026 around 04:22 UT.",
-    "reports": 27,
     "timestamp": null
   }
 }
