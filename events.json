@@ -1,12 +1,17 @@
 {
+  "7229": {
+    "summary": "We received 6 reports about a fireball seen over Ontario, Qu\u00e9bec and Quebec on Tuesday, August 18th 2026 around 02:09 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "7226": {
     "summary": "We received 22 reports about a fireball seen over Ontario and Qu\u00e9bec on Monday, August 17th 2026 around 23:41 UT.",
     "reports": 22,
     "timestamp": null
   },
   "7216": {
-    "summary": "We received 5 reports about a fireball seen over Castilla y Le\u00f3n, Community of Madrid and Comunidad de Madrid on Monday, August 17th 2026 around 22:52 UT.",
-    "reports": 5,
+    "summary": "We received 7 reports about a fireball seen over Castilla y Le\u00f3n, Community of Madrid, Comunidad de Madrid and La Rioja on Monday, August 17th 2026 around 22:51 UT.",
+    "reports": 7,
     "timestamp": null
   },
   "7207": {
@@ -17,11 +22,6 @@
   "6781": {
     "summary": "We received 11 reports about a fireball seen over LA and TX on Monday, August 17th 2026 around 04:46 UT.",
     "reports": 11,
-    "timestamp": null
-  },
-  "6782": {
-    "summary": "We received 9 reports about a fireball seen over England and Scotland on Monday, August 17th 2026 around 03:46 UT.",
-    "reports": 9,
     "timestamp": null
   }
 }
