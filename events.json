@@ -1,12 +1,17 @@
 {
+  "7207": {
+    "summary": "We received 6 reports about a fireball seen over England on Monday, August 17th 2026 around 20:31 UT.",
+    "reports": 6,
+    "timestamp": null
+  },
   "6781": {
     "summary": "We received 11 reports about a fireball seen over LA and TX on Monday, August 17th 2026 around 04:46 UT.",
     "reports": 11,
     "timestamp": null
   },
   "6782": {
-    "summary": "We received 8 reports about a fireball seen over England and Scotland on Monday, August 17th 2026 around 03:46 UT.",
-    "reports": 8,
+    "summary": "We received 9 reports about a fireball seen over England and Scotland on Monday, August 17th 2026 around 03:46 UT.",
+    "reports": 9,
     "timestamp": null
   },
   "6783": {
@@ -17,11 +22,6 @@
   "6756": {
     "summary": "We received 42 reports about a fireball seen over CT, FL, GA, MA, MD, NC, NJ, NY, Ontario, PA, RI and VA on Sunday, August 16th 2026 around 01:18 UT.",
     "reports": 42,
-    "timestamp": null
-  },
-  "6663": {
-    "summary": "We received 13 reports about a fireball seen over England, Scotland and Wales on Friday, August 14th 2026 around 23:18 UT.",
-    "reports": 13,
     "timestamp": null
   }
 }
