@@ -9,6 +9,11 @@
     "reports": 7,
     "timestamp": null
   },
+  "7709": {
+    "summary": "We received 5 reports about a fireball seen over Kerala and Tamil Nadu on Saturday, August 22nd 2026 around 18:31 UT.",
+    "reports": 5,
+    "timestamp": null
+  },
   "7676": {
     "summary": "We received 6 reports about a fireball seen over CA on Saturday, August 22nd 2026 around 07:30 UT.",
     "reports": 6,
@@ -17,11 +22,6 @@
   "7654": {
     "summary": "We received 14 reports about a fireball seen over Abruzzo, Federation of Bosnia and Herzegovina, Ljubljana, Upravna enota Maribor, Veneto and Wojew\u00f3dztwo \u015bl\u0105skie on Friday, August 21st 2026 around 23:26 UT.",
     "reports": 14,
-    "timestamp": null
-  },
-  "7653": {
-    "summary": "We received 17 reports about a fireball seen over Auvergne-Rh\u00f4ne-Alpes, Occitanie and Provence-Alpes-C\u00f4te d'Azur on Friday, August 21st 2026 around 23:05 UT.",
-    "reports": 17,
     "timestamp": null
   }
 }
