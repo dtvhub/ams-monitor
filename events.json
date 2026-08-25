@@ -1,12 +1,17 @@
 {
   "7726": {
-    "summary": "We received 6 reports about a fireball seen over Gelderland, Noord-Holland, Nordrhein-Westfalen, North Rhine-Westphalia and Overijssel on Monday, August 24th 2026 around 21:22 UT.",
-    "reports": 6,
+    "summary": "We received 7 reports about a fireball seen over Gelderland, Noord-Holland, Nordrhein-Westfalen, North Rhine-Westphalia and Overijssel on Monday, August 24th 2026 around 21:20 UT.",
+    "reports": 7,
     "timestamp": null
   },
   "7732": {
     "summary": "We received 19 reports about a fireball seen over Bretagne, Centre-Val de Loire, Nouvelle-Aquitaine and Pays de la Loire on Monday, August 24th 2026 around 20:18 UT.",
     "reports": 19,
+    "timestamp": null
+  },
+  "7739": {
+    "summary": "We received 6 reports about a fireball seen over England and Wales on Monday, August 24th 2026 around 20:17 UT.",
+    "reports": 6,
     "timestamp": null
   },
   "7715": {
@@ -17,11 +22,6 @@
   "7704": {
     "summary": "We received 22 reports about a fireball seen over Bruxelles, Flevoland, Grand Est, Hessen, Limburg, Niedersachsen, Noord-Brabant, Noord-Holland, Nordrhein-Westfalen, Rheinland-Pfalz, Sachsen-Anhalt, Utrecht, Vlaanderen and Zuid-Holland on Sunday, August 23rd 2026 around 19:23 UT.",
     "reports": 22,
-    "timestamp": null
-  },
-  "7701": {
-    "summary": "We received 7 reports about a fireball seen over England on Saturday, August 22nd 2026 around 22:21 UT.",
-    "reports": 7,
     "timestamp": null
   }
 }
