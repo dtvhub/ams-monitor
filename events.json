@@ -1,4 +1,9 @@
 {
+  "8246": {
+    "summary": "We received 10 reports about a fireball seen over Manitoba and Saskatchewan on Thursday, September 3rd 2026 around 02:44 UT.",
+    "reports": 10,
+    "timestamp": null
+  },
   "8223": {
     "summary": "We received 6 reports about a fireball seen over CA on Wednesday, September 2nd 2026 around 08:41 UT.",
     "reports": 6,
@@ -17,11 +22,6 @@
   "8189": {
     "summary": "We received 7 reports about a fireball seen over CA on Tuesday, September 1st 2026 around 05:56 UT.",
     "reports": 7,
-    "timestamp": null
-  },
-  "8109": {
-    "summary": "We received 6 reports about a fireball seen over Baden-W\u00fcrttemberg, England, Noord-Holland, Utrecht and Vlaanderen on Monday, August 31st 2026 around 19:32 UT.",
-    "reports": 6,
     "timestamp": null
   }
 }
