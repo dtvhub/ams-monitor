@@ -1,7 +1,17 @@
 {
+  "8247": {
+    "summary": "We received 21 reports about a fireball seen over Paran\u00e1 and S\u00e3o Paulo on Thursday, September 3rd 2026 around 23:55 UT.",
+    "reports": 21,
+    "timestamp": null
+  },
   "8246": {
     "summary": "We received 10 reports about a fireball seen over Manitoba and Saskatchewan on Thursday, September 3rd 2026 around 02:44 UT.",
     "reports": 10,
+    "timestamp": null
+  },
+  "8216": {
+    "summary": "We received 5 reports about a fireball seen over Minas Gerais and S\u00e3o Paulo on Wednesday, September 2nd 2026 around 22:11 UT.",
+    "reports": 5,
     "timestamp": null
   },
   "8223": {
@@ -12,16 +22,6 @@
   "8222": {
     "summary": "We received 15 reports about a fireball seen over AZ, CA and NV on Wednesday, September 2nd 2026 around 07:15 UT.",
     "reports": 15,
-    "timestamp": null
-  },
-  "8198": {
-    "summary": "We received 5 reports about a fireball seen over Bahia on Wednesday, September 2nd 2026 around 00:18 UT.",
-    "reports": 5,
-    "timestamp": null
-  },
-  "8189": {
-    "summary": "We received 7 reports about a fireball seen over CA on Tuesday, September 1st 2026 around 05:56 UT.",
-    "reports": 7,
     "timestamp": null
   }
 }
